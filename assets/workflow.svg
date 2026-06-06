@@ -1,0 +1,168 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 350" width="100%" height="100%">
+  <defs>
+    <!-- Gradients -->
+    <linearGradient id="blue-purple" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#6366f1"/>
+      <stop offset="100%" stop-color="#a855f7"/>
+    </linearGradient>
+    <linearGradient id="purple-pink" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#a855f7"/>
+      <stop offset="100%" stop-color="#ec4899"/>
+    </linearGradient>
+    <linearGradient id="pink-green" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#ec4899"/>
+      <stop offset="100%" stop-color="#10b981"/>
+    </linearGradient>
+    <linearGradient id="card-glow" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#ffffff" stop-opacity="0.07"/>
+      <stop offset="100%" stop-color="#ffffff" stop-opacity="0.01"/>
+    </linearGradient>
+    
+    <!-- Filters for Glow Effects -->
+    <filter id="glow-blue" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="6" result="blur" />
+      <feMerge>
+        <feMergeNode in="blur" />
+        <feMergeNode in="SourceGraphic" />
+      </feMerge>
+    </filter>
+    <filter id="glow-purple" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="6" result="blur" />
+      <feMerge>
+        <feMergeNode in="blur" />
+        <feMergeNode in="SourceGraphic" />
+      </feMerge>
+    </filter>
+    <filter id="glow-pink" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="6" result="blur" />
+      <feMerge>
+        <feMergeNode in="blur" />
+        <feMergeNode in="SourceGraphic" />
+      </feMerge>
+    </filter>
+    <filter id="glow-green" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="6" result="blur" />
+      <feMerge>
+        <feMergeNode in="blur" />
+        <feMergeNode in="SourceGraphic" />
+      </feMerge>
+    </filter>
+  </defs>
+
+  <style>
+    @keyframes dash {
+      to {
+        stroke-dashoffset: -40;
+      }
+    }
+    @keyframes pulse {
+      0%, 100% { opacity: 0.2; }
+      50% { opacity: 0.8; }
+    }
+    .flow-line {
+      stroke-dasharray: 8, 12;
+      animation: dash 2s linear infinite;
+    }
+    .floating-card {
+      transition: transform 0.3s ease;
+    }
+    .text-title {
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+      font-weight: 700;
+      fill: #ffffff;
+      font-size: 14px;
+    }
+    .text-desc {
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+      font-weight: 400;
+      fill: #94a3b8;
+      font-size: 11px;
+    }
+    .step-num {
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+      font-weight: 800;
+      fill: #475569;
+      font-size: 20px;
+    }
+  </style>
+
+  <!-- Background Canvas -->
+  <rect width="1000" height="350" rx="24" fill="#07080d" stroke="#1e293b" stroke-width="1.5"/>
+  <rect width="1000" height="350" rx="24" fill="url(#card-glow)"/>
+
+  <!-- Grid Pattern -->
+  <g opacity="0.05">
+    <path d="M 0,50 L 1000,50 M 0,100 L 1000,100 M 0,150 L 1000,150 M 0,200 L 1000,200 M 0,250 L 1000,250 M 0,300 L 1000,300" stroke="#ffffff" stroke-width="1"/>
+    <path d="M 100,0 L 100,350 M 200,0 L 200,350 M 300,0 L 300,350 M 400,0 L 400,350 M 500,0 L 500,350 M 600,0 L 600,350 M 700,0 L 700,350 M 800,0 L 800,350 M 900,0 L 900,350" stroke="#ffffff" stroke-width="1"/>
+  </g>
+
+  <!-- Flow Lines -->
+  <path d="M 230,175 L 340,175" stroke="#6366f1" stroke-width="3" opacity="0.2"/>
+  <path d="M 230,175 L 340,175" stroke="url(#blue-purple)" stroke-width="2" class="flow-line" />
+  
+  <path d="M 490,175 L 600,175" stroke="#a855f7" stroke-width="3" opacity="0.2"/>
+  <path d="M 490,175 L 600,175" stroke="url(#purple-pink)" stroke-width="2" class="flow-line" />
+
+  <path d="M 750,175 L 860,175" stroke="#ec4899" stroke-width="3" opacity="0.2"/>
+  <path d="M 750,175 L 860,175" stroke="url(#pink-green)" stroke-width="2" class="flow-line" />
+
+  <!-- CARD 1 -->
+  <g class="floating-card" transform="translate(50, 90)">
+    <rect width="180" height="170" rx="16" fill="#6366f1" opacity="0.02" filter="url(#glow-blue)"/>
+    <rect width="180" height="170" rx="16" fill="#0c0e17" stroke="#312e81" stroke-width="1.5"/>
+    <rect width="180" height="170" rx="16" fill="url(#card-glow)"/>
+    <rect x="15" y="15" width="40" height="6" rx="3" fill="#6366f1" opacity="0.8" filter="url(#glow-blue)"/>
+    <text x="145" y="32" class="step-num">01</text>
+    <circle cx="35" cy="55" r="16" fill="#1e1b4b" stroke="#6366f1" stroke-width="1"/>
+    <path d="M 29,55 L 41,55 M 35,49 L 35,61" stroke="#818cf8" stroke-width="2" stroke-linecap="round"/>
+    <text x="15" y="95" class="text-title">Data Ingestion</text>
+    <text x="15" y="115" class="text-desc">Voice streams, webhooks,</text>
+    <text x="15" y="130" class="text-desc">social events, and client</text>
+    <text x="15" y="145" class="text-desc">API connections.</text>
+  </g>
+
+  <!-- CARD 2 -->
+  <g class="floating-card" transform="translate(310, 90)">
+    <rect width="180" height="170" rx="16" fill="#a855f7" opacity="0.02" filter="url(#glow-purple)"/>
+    <rect width="180" height="170" rx="16" fill="#0c0e17" stroke="#581c87" stroke-width="1.5"/>
+    <rect width="180" height="170" rx="16" fill="url(#card-glow)"/>
+    <rect x="15" y="15" width="40" height="6" rx="3" fill="#a855f7" opacity="0.8" filter="url(#glow-purple)"/>
+    <text x="145" y="32" class="step-num">02</text>
+    <circle cx="35" cy="55" r="16" fill="#3b0764" stroke="#a855f7" stroke-width="1"/>
+    <path d="M 28,52 L 42,52 M 28,58 L 42,58 M 35,47 L 35,63" stroke="#c084fc" stroke-width="1.5" stroke-linecap="round"/>
+    <text x="15" y="95" class="text-title">Reasoning &amp; RAG</text>
+    <text x="15" y="115" class="text-desc">Vector knowledge bases,</text>
+    <text x="15" y="130" class="text-desc">LLM orchestration, and</text>
+    <text x="15" y="145" class="text-desc">context retrievals.</text>
+  </g>
+
+  <!-- CARD 3 -->
+  <g class="floating-card" transform="translate(570, 90)">
+    <rect width="180" height="170" rx="16" fill="#ec4899" opacity="0.02" filter="url(#glow-pink)"/>
+    <rect width="180" height="170" rx="16" fill="#0c0e17" stroke="#831843" stroke-width="1.5"/>
+    <rect width="180" height="170" rx="16" fill="url(#card-glow)"/>
+    <rect x="15" y="15" width="40" height="6" rx="3" fill="#ec4899" opacity="0.8" filter="url(#glow-pink)"/>
+    <text x="145" y="32" class="step-num">03</text>
+    <circle cx="35" cy="55" r="16" fill="#500724" stroke="#ec4899" stroke-width="1"/>
+    <path d="M 30,51 L 40,51 L 40,57 C 40,61 35,63 35,63 C 35,63 30,61 30,57 Z" fill="none" stroke="#f472b6" stroke-width="2" stroke-linejoin="round"/>
+    <text x="15" y="95" class="text-title">Verification Gate</text>
+    <text x="15" y="115" class="text-desc">Anti-spoofing checks,</text>
+    <text x="15" y="130" class="text-desc">liveness validation, and</text>
+    <text x="15" y="145" class="text-desc">security guardrails.</text>
+  </g>
+
+  <!-- CARD 4 -->
+  <g class="floating-card" transform="translate(830, 90)">
+    <rect width="180" height="170" rx="16" fill="#10b981" opacity="0.02" filter="url(#glow-green)"/>
+    <rect width="180" height="170" rx="16" fill="#0c0e17" stroke="#064e3b" stroke-width="1.5"/>
+    <rect width="180" height="170" rx="16" fill="url(#card-glow)"/>
+    <rect x="15" y="15" width="40" height="6" rx="3" fill="#10b981" opacity="0.8" filter="url(#glow-green)"/>
+    <text x="145" y="32" class="step-num">04</text>
+    <circle cx="35" cy="55" r="16" fill="#022c22" stroke="#10b981" stroke-width="1"/>
+    <path d="M 29,56 L 33,60 L 41,50" stroke="#34d399" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+    <text x="15" y="95" class="text-title">Agentic Action</text>
+    <text x="15" y="115" class="text-desc">Real-time phone calls,</text>
+    <text x="15" y="130" class="text-desc">VIP link delivery, and</text>
+    <text x="15" y="145" class="text-desc">Instagram auto-comments.</text>
+  </g>
+</svg>

@@ -47,7 +47,7 @@ This diagram illustrates the cloud layout of how the showcase platform serves vi
 The step-by-step request flow when users visit the portfolio and interact with the project video presentations:
 
 <p align="center">
-<img src="./assets/workflow.png" width="100%">
+<img src="./assets/workflow.svg" width="100%">
 </p>
 
 ---
@@ -84,7 +84,7 @@ AI-projects-display/
 ├── assets/
 │   ├── banner.png        # Repository hero banner
 │   ├── architecture.png  # Web architecture diagram
-│   └── workflow.png      # AI showcase workflow diagram
+│   └── workflow.svg      # AI showcase workflow diagram
 ├── app.py                # Flask Server Router
 ├── vercel.json           # Vercel deployment configuration
 ├── render.yaml           # Render deployment configuration
