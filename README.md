@@ -1,8 +1,4 @@
 <p align="center">
-<img src="./assets/banner.png" width="100%">
-</p>
-
-<p align="center">
   <strong>The official enterprise showcase repository for Shanti Infosoft—demonstrating production-ready AI agent architectures, computer vision security, and hyper-automation pipelines.</strong>
 </p>
 
