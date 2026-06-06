@@ -13,6 +13,10 @@
 </p>
 
 <p align="center">
+  📍 India &nbsp;&nbsp;•&nbsp;&nbsp; 🔗 <a href="https://shantiinfosoft.com/" target="_blank">shantiinfosoft.com</a> &nbsp;&nbsp;•&nbsp;&nbsp; ✉️ <a href="mailto:info@shantiinfosoft.com">info@shantiinfosoft.com</a>
+</p>
+
+<p align="center">
   <a href="https://ai-projects-display.vercel.app/" target="_blank">Live Client Portal</a> •
   <a href="https://github.com/shanti-python/Ai-Project-showcase/issues">Submit Inquiries</a>
 </p>
