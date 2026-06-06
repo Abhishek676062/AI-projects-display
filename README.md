@@ -66,6 +66,10 @@ We maintain high engineering standards by utilizing robust, scalable, and modern
 
 | Category | Technologies | Purpose |
 | :--- | :--- | :--- |
+| **AI Agents & LLMs** | GPT-4, Llama 3 (Fine-tuned), Model Context Protocol (MCP) | Core orchestration, context-aware reasoning, and secure tool integration |
+| **Cognitive Search (RAG)**| Pinecone, Qdrant, OpenAI Embeddings (text-embedding-3) | Semantic search index, dynamic context injection, and document vectorization |
+| **Identity & Vision** | FaceNet, OpenCV, Deep Liveness Classifiers | Similarity scoring, KYC face validation, and deepfake verification |
+| **Speech Intelligence** | Whisper (Speech-to-Text), ElevenLabs (TTS), WebRTC | Dynamic voice-based customer bookings and natural language calls |
 | **Interface & UX** | Jinja2 Templates, HTML5, Vanilla CSS3, Modern JS | Clean, responsive, glassmorphic layout and visual interactions |
 | **Application Layer** | Flask (Python 3.10+) | Lightweight WSGI micro-framework for secure service routing |
 | **Production Serving** | Gunicorn | Enterprise-grade HTTP server configuration |
