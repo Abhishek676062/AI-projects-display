@@ -78,45 +78,33 @@ We maintain high engineering standards by utilizing robust, scalable, and modern
 
 ---
 
-## 📁 Repository Structure
+### 🤖 AI & LLM Stack
 
-```bash
-AI-projects-display/
-├── assets/
-│   ├── banner.png        # Repository hero banner
-│   ├── architecture.png  # Web architecture diagram
-│   └── workflow.svg      # Animated workflow SVG diagram
-├── app.py                # Server router entrypoint
-├── vercel.json           # Vercel serverless hosting settings
-├── render.yaml           # Render container hosting settings
-├── requirements.txt      # Python dependencies
-├── templates/
-│   └── index.html        # Front-end showcase interface
-└── README.md             # Repository documentation
-```
-
----
-
-## 🌍 Cloud Deployment Blueprint
-
-Our web solutions are built with cloud portability in mind. This portal codebase includes infrastructure-as-code blueprints for instant global provisioning:
-
-### Vercel Serverless Hosting
-We use Vercel's edge network for optimal visual delivery. The custom `vercel.json` maps all incoming traffic to serverless Python handlers running on the `@vercel/python` engine.
-
-### Render Container Infrastructure
-The included `render.yaml` automatically configures scaling parameters, build commands (`pip install -r requirements.txt`), and production start triggers (`gunicorn app:app`).
-
----
-
-## 🗺️ Portal Development Roadmap
-
-- [x] Responsive glassmorphic client interface
-- [x] Cloud hosting integrations (Vercel & Render)
-- [x] Automated vector workflow representation (SVG)
-- [ ] Enterprise CRM and direct booking forms
-- [ ] Multi-tenant workspace capabilities
-- [ ] Custom client login gates for private builds
+<p align="center">
+  <img alt="Python" src="https://img.shields.io/badge/-Python-3776AB?style=flat-square&logo=python&logoColor=white" />
+  <img alt="OpenAI" src="https://img.shields.io/badge/-OpenAI-412991?style=flat-square&logo=openai&logoColor=white" />
+  <img alt="Anthropic" src="https://img.shields.io/badge/-Anthropic-191919?style=flat-square&logo=anthropic&logoColor=white" />
+  <img alt="Google Gemini" src="https://img.shields.io/badge/-Gemini-4285F4?style=flat-square&logo=google&logoColor=white" />
+  <img alt="Ollama" src="https://img.shields.io/badge/-Ollama-000000?style=flat-square&logo=ollama&logoColor=white" />
+  <img alt="LangChain" src="https://img.shields.io/badge/-LangChain-1C3C3C?style=flat-square&logo=chainlink&logoColor=white" />
+  <img alt="LlamaIndex" src="https://img.shields.io/badge/-LlamaIndex-6B46C1?style=flat-square" />
+  <img alt="CrewAI" src="https://img.shields.io/badge/-CrewAI-FF6B35?style=flat-square" />
+  <img alt="AutoGen" src="https://img.shields.io/badge/-AutoGen-0A66C2?style=flat-square" />
+  <img alt="Vector Database" src="https://img.shields.io/badge/-Vector_DB-009688?style=flat-square" />
+  <img alt="Pinecone" src="https://img.shields.io/badge/-Pinecone-14B8A6?style=flat-square" />
+  <img alt="ChromaDB" src="https://img.shields.io/badge/-ChromaDB-8B5CF6?style=flat-square" />
+  <img alt="FAISS" src="https://img.shields.io/badge/-FAISS-FF9800?style=flat-square" />
+  <img alt="RAG" src="https://img.shields.io/badge/-RAG-10B981?style=flat-square" />
+  <img alt="Hugging Face" src="https://img.shields.io/badge/-HuggingFace-FFD21E?style=flat-square&logo=huggingface&logoColor=black" />
+  <img alt="Transformers" src="https://img.shields.io/badge/-Transformers-FFCC00?style=flat-square" />
+  <img alt="PyTorch" src="https://img.shields.io/badge/-PyTorch-EE4C2C?style=flat-square&logo=pytorch&logoColor=white" />
+  <img alt="TensorFlow" src="https://img.shields.io/badge/-TensorFlow-FF6F00?style=flat-square&logo=tensorflow&logoColor=white" />
+  <img alt="FastAPI" src="https://img.shields.io/badge/-FastAPI-009688?style=flat-square&logo=fastapi&logoColor=white" />
+  <img alt="Docker" src="https://img.shields.io/badge/-Docker-2496ED?style=flat-square&logo=docker&logoColor=white" />
+  <img alt="GitHub Actions" src="https://img.shields.io/badge/-GitHub_Actions-2088FF?style=flat-square&logo=github-actions&logoColor=white" />
+  <img alt="AWS" src="https://img.shields.io/badge/-AWS-232F3E?style=flat-square&logo=amazonaws&logoColor=white" />
+  <img alt="Vercel" src="https://img.shields.io/badge/-Vercel-000000?style=flat-square&logo=vercel&logoColor=white" />
+</p>
 
 ---
 
