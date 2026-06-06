@@ -96,47 +96,12 @@ AI-projects-display/
 
 ---
 
-## 💻 Local Preview & Development
+## 🌍 Cloud Hosting & Deployment
 
-To preview the portfolio website locally:
+The Shanti AI Showcase website is engineered for seamless cloud orchestration and is active on serverless infrastructures:
 
-1. **Clone this repository:**
-   ```bash
-   git clone https://github.com/shanti-python/Ai-Project-showcase.git
-   cd AI-projects-display
-   ```
-
-2. **Configure Virtual Environment:**
-   ```bash
-   python3 -m venv venv
-   source venv/bin/activate
-   ```
-
-3. **Install Dependencies:**
-   ```bash
-   pip install -r requirements.txt
-   ```
-
-4. **Launch Server:**
-   ```bash
-   python app.py
-   ```
-   Open `http://127.0.0.1:5000/` in your browser.
-
----
-
-## 🌍 Cloud Deployment
-
-The website is configured to deploy instantly on Vercel or Render.
-
-### Vercel Deployment (Recommended)
-This website includes `vercel.json` for serverless execution:
-1. Install Vercel CLI: `npm i -g vercel`
-2. Run `vercel` in the project root folder.
-
-### Render Deployment
-1. Connect this repo to Render.
-2. Select **Web Service** (Render automatically reads `render.yaml`).
+* **Vercel Serverless Hosting:** Configured via `vercel.json` utilizing the `@vercel/python` builder for edge execution and fast global response times (< 50ms).
+* **Render Web Services:** Configured via infrastructure-as-code (`render.yaml`) to build and deploy continuously from primary git branches.
 
 ---
 
