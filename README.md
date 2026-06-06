@@ -43,7 +43,7 @@ Rather than theoretical models, this portal displays live, interactive applicati
 The following diagram maps out our high-level corporate deployment layout, demonstrating how we route client interactions through edge delivery servers down to isolated microservices and LLM orchestrators:
 
 <p align="center">
-<img src="./assets/architecture.png" width="100%">
+<img src="./assets/architecture.svg" width="100%">
 </p>
 
 ---
