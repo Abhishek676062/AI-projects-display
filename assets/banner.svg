@@ -6,6 +6,18 @@
       <stop offset="50%" stop-color="#a855f7"/>
       <stop offset="100%" stop-color="#ec4899"/>
     </linearGradient>
+    <linearGradient id="visor-grad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#00f2fe"/>
+      <stop offset="100%" stop-color="#4facfe"/>
+    </linearGradient>
+    <linearGradient id="robot-shading-1" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#242938"/>
+      <stop offset="100%" stop-color="#0e111a"/>
+    </linearGradient>
+    <linearGradient id="robot-shading-2" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#3b4257"/>
+      <stop offset="100%" stop-color="#161b29"/>
+    </linearGradient>
     <linearGradient id="glow-grad" x1="0%" y1="0%" x2="0%" y2="100%">
       <stop offset="0%" stop-color="#ffffff" stop-opacity="0.05"/>
       <stop offset="100%" stop-color="#ffffff" stop-opacity="0"/>
@@ -13,8 +25,8 @@
 
     <!-- Glowing Filters -->
     <filter id="neon-glow" x="-50%" y="-50%" width="200%" height="200%">
-      <feGaussianBlur stdDeviation="8" result="blur1" />
-      <feGaussianBlur stdDeviation="15" result="blur2" />
+      <feGaussianBlur stdDeviation="6" result="blur1" />
+      <feGaussianBlur stdDeviation="12" result="blur2" />
       <feMerge>
         <feMergeNode in="blur2" />
         <feMergeNode in="blur1" />
@@ -24,36 +36,34 @@
   </defs>
 
   <style>
-    @keyframes pulse {
-      0%, 100% { transform: scale(1); opacity: 0.8; }
-      50% { transform: scale(1.1); opacity: 1; filter: drop-shadow(0 0 15px rgba(168, 85, 247, 0.6)); }
-    }
-    @keyframes wave {
-      0% { stroke-dashoffset: 0; }
-      100% { stroke-dashoffset: -100; }
+    @keyframes visor-pulse {
+      0%, 100% { opacity: 0.8; filter: drop-shadow(0 0 8px rgba(0, 242, 254, 0.6)); }
+      50% { opacity: 1; filter: drop-shadow(0 0 18px rgba(0, 242, 254, 1)); }
     }
     @keyframes float {
       0%, 100% { transform: translateY(0px); }
       50% { transform: translateY(-8px); }
     }
-    @keyframes orbit {
-      from { transform: rotate(0deg); }
-      to { transform: rotate(360deg); }
+    @keyframes pulse-ring {
+      0% { r: 15; opacity: 0.8; }
+      100% { r: 35; opacity: 0; }
     }
-    .core-node {
+    @keyframes signal-dash {
+      to { stroke-dashoffset: -40; }
+    }
+    .robot-head {
       transform-origin: 600px 150px;
-      animation: pulse 4s ease-in-out infinite;
+      animation: float 4s ease-in-out infinite;
     }
-    .wave-line {
-      stroke-dasharray: 12, 18;
-      animation: wave 4s linear infinite;
+    .visor {
+      animation: visor-pulse 2s ease-in-out infinite;
     }
-    .floating-node {
-      animation: float 5s ease-in-out infinite;
+    .pulse-circle {
+      animation: pulse-ring 2s cubic-bezier(0.215, 0.61, 0.355, 1) infinite;
     }
-    .rotating-ring {
-      transform-origin: 600px 150px;
-      animation: orbit 20s linear infinite;
+    .signal-line {
+      stroke-dasharray: 8, 12;
+      animation: signal-dash 2s linear infinite;
     }
     .grid-bg {
       opacity: 0.08;
@@ -70,54 +80,81 @@
     <path d="M 60,0 L 60,300 M 120,0 L 120,300 M 180,0 L 180,300 M 240,0 L 240,300 M 300,0 L 300,300 M 360,0 L 360,300 M 420,0 L 420,300 M 480,0 L 480,300 M 540,0 L 540,300 M 600,0 L 600,300 M 660,0 L 660,300 M 720,0 L 720,300 M 780,0 L 780,300 M 840,0 L 840,300 M 900,0 L 900,300 M 960,0 L 960,300 M 1020,0 L 1020,300 M 1080,0 L 1080,300 M 1140,0 L 1140,300" stroke="#ffffff" stroke-width="0.5"/>
   </g>
 
-  <!-- Network Connections (Glowing Background Lines) -->
-  <g opacity="0.3" stroke="url(#cyber-grad)" stroke-width="1.5" fill="none">
-    <!-- Concentric Circles from Core -->
-    <circle cx="600" cy="150" r="100" class="rotating-ring" stroke-dasharray="10, 15"/>
-    <circle cx="600" cy="150" r="180" class="rotating-ring" style="animation-direction: reverse; animation-duration: 30s;" stroke-dasharray="20, 30"/>
-    <circle cx="600" cy="150" r="260" class="rotating-ring" style="animation-duration: 40s;" stroke-dasharray="40, 40"/>
-
-    <!-- Dynamic Flow Pathways -->
-    <path d="M 150,150 C 350,50 450,250 600,150" class="wave-line"/>
-    <path d="M 600,150 C 750,50 850,250 1050,150" class="wave-line" style="animation-delay: -1s;"/>
-    <path d="M 350,240 C 450,150 550,150 600,150" class="wave-line" style="animation-delay: -2s;"/>
-    <path d="M 600,150 C 650,150 750,150 850,60" class="wave-line" style="animation-delay: -3s;"/>
+  <!-- Cybernetic Circuit Links (Background flow) -->
+  <g stroke="url(#cyber-grad)" stroke-width="1.5" fill="none" opacity="0.35">
+    <path d="M 150,150 L 480,150" class="signal-line"/>
+    <path d="M 300,70 L 520,110" class="signal-line" style="animation-delay: -0.5s;"/>
+    <path d="M 350,240 L 510,180" class="signal-line" style="animation-delay: -1s;"/>
+    <path d="M 1050,150 L 720,150" class="signal-line" style="animation-direction: reverse;"/>
+    <path d="M 900,70 L 680,110" class="signal-line" style="animation-direction: reverse; animation-delay: -0.5s;"/>
+    <path d="M 850,240 L 690,180" class="signal-line" style="animation-direction: reverse; animation-delay: -1s;"/>
   </g>
 
-  <!-- Pulsing Connecting Core -->
-  <g class="core-node">
-    <circle cx="600" cy="150" r="30" fill="url(#cyber-grad)" filter="url(#neon-glow)" opacity="0.8"/>
-    <circle cx="600" cy="150" r="15" fill="#ffffff"/>
-  </g>
+  <!-- 3D Robot Head Object -->
+  <g class="robot-head">
+    <!-- Pulse Ring Ears -->
+    <circle cx="510" cy="150" r="25" stroke="#00f2fe" stroke-width="1.5" fill="none" class="pulse-circle"/>
+    <circle cx="690" cy="150" r="25" stroke="#00f2fe" stroke-width="1.5" fill="none" class="pulse-circle"/>
 
-  <!-- Peripheral Nodes with Wave Animation -->
-  <g fill="#08090d" stroke="url(#cyber-grad)" stroke-width="2">
-    <!-- Left-side clusters -->
-    <circle cx="150" cy="150" r="12" class="floating-node" style="animation-delay: 0s;"/>
-    <circle cx="350" cy="240" r="8" class="floating-node" style="animation-delay: 1s;"/>
-    <circle cx="300" cy="70" r="10" class="floating-node" style="animation-delay: 2s;"/>
+    <!-- Ear Mount Left -->
+    <path d="M 515,135 C 500,135 495,150 495,150 C 495,150 500,165 515,165 Z" fill="url(#robot-shading-1)" stroke="#6366f1" stroke-width="1.5"/>
+    <!-- Ear Mount Right -->
+    <path d="M 685,135 C 700,135 705,150 705,150 C 705,150 700,165 685,165 Z" fill="url(#robot-shading-1)" stroke="#6366f1" stroke-width="1.5"/>
+
+    <!-- Main Neck Base -->
+    <path d="M 570,200 L 630,200 L 640,245 L 560,245 Z" fill="url(#robot-shading-1)" stroke="#1e293b" stroke-width="2"/>
+    <path d="M 590,200 L 610,200 L 615,245 L 585,245 Z" fill="#0f111a" opacity="0.8"/>
+
+    <!-- Jaw Plate (3D look) -->
+    <path d="M 540,160 L 660,160 L 640,205 L 600,215 L 560,205 Z" fill="url(#robot-shading-2)" stroke="#312e81" stroke-width="1.5"/>
+
+    <!-- Left Cheek Plate -->
+    <polygon points="530,120 570,120 540,160 525,140" fill="url(#robot-shading-1)" stroke="#475569" stroke-width="1"/>
+    <!-- Right Cheek Plate -->
+    <polygon points="670,120 630,120 660,160 675,140" fill="url(#robot-shading-1)" stroke="#475569" stroke-width="1"/>
+
+    <!-- Front Dome (Forehead) -->
+    <path d="M 530,120 C 530,70 670,70 670,120 Z" fill="url(#robot-shading-2)" stroke="#6366f1" stroke-width="2"/>
+
+    <!-- Visor Plate Backing -->
+    <rect x="536" y="115" width="128" height="28" rx="6" fill="#06080e" stroke="#1e293b" stroke-width="1"/>
+
+    <!-- Glowing Cyber Visor Eyes (Robot Vision) -->
+    <rect x="542" y="121" width="116" height="16" rx="4" fill="url(#visor-grad)" class="visor" filter="url(#neon-glow)"/>
     
-    <!-- Right-side clusters -->
-    <circle cx="1050" cy="150" r="12" class="floating-node" style="animation-delay: 0.5s;"/>
-    <circle cx="850" cy="60" r="8" class="floating-node" style="animation-delay: 1.5s;"/>
-    <circle cx="900" cy="230" r="10" class="floating-node" style="animation-delay: 2.5s;"/>
+    <!-- Visor Scanlines -->
+    <line x1="542" y1="125" x2="658" y2="125" stroke="#ffffff" stroke-width="1" opacity="0.3"/>
+    <line x1="542" y1="129" x2="658" y2="129" stroke="#ffffff" stroke-width="1" opacity="0.3"/>
+    <line x1="542" y1="133" x2="658" y2="133" stroke="#ffffff" stroke-width="1" opacity="0.3"/>
+
+    <!-- Forehead Central Core Dot -->
+    <circle cx="600" cy="85" r="4" fill="#00f2fe" filter="url(#neon-glow)"/>
   </g>
 
-  <!-- Internal Node Accents (White centers) -->
-  <g fill="#ffffff">
-    <circle cx="150" cy="150" r="4" class="floating-node" style="animation-delay: 0s;"/>
-    <circle cx="350" cy="240" r="2.5" class="floating-node" style="animation-delay: 1s;"/>
-    <circle cx="300" cy="70" r="3.5" class="floating-node" style="animation-delay: 2s;"/>
-    <circle cx="1050" cy="150" r="4" class="floating-node" style="animation-delay: 0.5s;"/>
-    <circle cx="850" cy="60" r="2.5" class="floating-node" style="animation-delay: 1.5s;"/>
-    <circle cx="900" cy="230" r="3.5" class="floating-node" style="animation-delay: 2.5s;"/>
+  <!-- Peripheral Glow Nodes (Representing AI Processing) -->
+  <g fill="none" stroke="url(#cyber-grad)" stroke-width="2">
+    <circle cx="150" cy="150" r="10" class="robot-head" style="animation-delay: 0s;"/>
+    <circle cx="300" cy="70" r="8" class="robot-head" style="animation-delay: 0.5s;"/>
+    <circle cx="350" cy="240" r="8" class="robot-head" style="animation-delay: 1s;"/>
+    <circle cx="1050" cy="150" r="10" class="robot-head" style="animation-delay: 0.2s;"/>
+    <circle cx="900" cy="70" r="8" class="robot-head" style="animation-delay: 0.7s;"/>
+    <circle cx="850" cy="240" r="8" class="robot-head" style="animation-delay: 1.2s;"/>
+  </g>
+  
+  <g fill="#00f2fe">
+    <circle cx="150" cy="150" r="3" class="robot-head" style="animation-delay: 0s;"/>
+    <circle cx="300" cy="70" r="2" class="robot-head" style="animation-delay: 0.5s;"/>
+    <circle cx="350" cy="240" r="2" class="robot-head" style="animation-delay: 1s;"/>
+    <circle cx="1050" cy="150" r="3" class="robot-head" style="animation-delay: 0.2s;"/>
+    <circle cx="900" cy="70" r="2" class="robot-head" style="animation-delay: 0.7s;"/>
+    <circle cx="850" cy="240" r="2" class="robot-head" style="animation-delay: 1.2s;"/>
   </g>
 
-  <!-- Glowing HUD Elements -->
-  <g font-family="'Inter', -apple-system, sans-serif" font-size="10" fill="#94a3b8" opacity="0.6">
-    <text x="30" y="45">[ AI ORCHESTRATION LAYER ]</text>
-    <text x="30" y="275">LATENCY: &lt; 50ms</text>
-    <text x="1030" y="45">STATUS: OPERATIONAL</text>
-    <text x="1060" y="275">V. 2.0.26</text>
+  <!-- HUD Interface Details -->
+  <g font-family="'Inter', -apple-system, sans-serif" font-size="9" fill="#64748b" opacity="0.6">
+    <text x="30" y="45">[ COGNITIVE ROBOTIC AGENT ]</text>
+    <text x="30" y="275">HOST: SHANTI CLOUD</text>
+    <text x="1045" y="45">STATE: INTELLIGENT</text>
+    <text x="1080" y="275">SYS: ONLINE</text>
   </g>
 </svg>
