@@ -7,11 +7,11 @@
 </p>
 
 <p align="center">
-  <a href="https://github.com/Shanti-Infosoft/AI-projects-display/blob/main/LICENSE">
-    <img src="https://img.shields.io/github/license/Shanti-Infosoft/AI-projects-display?style=for-the-badge&color=818cf8" alt="License Badge">
+  <a href="https://github.com/shanti-python/Ai-Project-showcase/blob/main/LICENSE">
+    <img src="https://img.shields.io/github/license/shanti-python/Ai-Project-showcase?style=for-the-badge&color=818cf8" alt="License Badge">
   </a>
-  <a href="https://github.com/Shanti-Infosoft/AI-projects-display/releases">
-    <img src="https://img.shields.io/github/v/release/Shanti-Infosoft/AI-projects-display?style=for-the-badge&color=a855f7" alt="Version Badge">
+  <a href="https://github.com/shanti-python/Ai-Project-showcase/releases">
+    <img src="https://img.shields.io/github/v/release/shanti-python/Ai-Project-showcase?style=for-the-badge&color=a855f7" alt="Version Badge">
   </a>
   <img src="https://img.shields.io/badge/AI--Powered-True-ac0865?style=for-the-badge" alt="AI-Powered Badge">
   <img src="https://img.shields.io/badge/Open--Source-Yes-10b981?style=for-the-badge" alt="Open Source Badge">
@@ -20,7 +20,7 @@
 <p align="center">
   <a href="#installation">Live Demo</a> •
   <a href="#project-structure">Documentation</a> •
-  <a href="https://github.com/Shanti-Infosoft/AI-projects-display/issues">Report Issue</a>
+  <a href="https://github.com/shanti-python/Ai-Project-showcase/issues">Report Issue</a>
 </p>
 
 ---
@@ -104,7 +104,7 @@ AI-projects-display/
 
 1. **Clone the repository:**
    ```bash
-   git clone https://github.com/Shanti-Infosoft/AI-projects-display.git
+   git clone https://github.com/shanti-python/Ai-Project-showcase.git
    cd AI-projects-display
    ```
 
