@@ -602,6 +602,213 @@
             transform: translateY(0);
         }
 
+        /* 3D Workflow Section */
+        .workflow-section {
+            padding: 120px 0;
+        }
+
+        .workflow-container {
+            display: grid;
+            grid-template-columns: 1.2fr 1fr;
+            gap: 60px;
+            align-items: center;
+            margin-top: 50px;
+        }
+
+        .workflow-3d-wrapper {
+            position: relative;
+            width: 100%;
+            height: 550px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            perspective: 1600px;
+            background: radial-gradient(circle at center, rgba(99, 102, 241, 0.05) 0%, transparent 70%);
+        }
+
+        .workflow-3d-scene {
+            position: relative;
+            width: 380px;
+            height: 400px;
+            transform-style: preserve-3d;
+            transform: rotateX(60deg) rotateZ(-35deg);
+            transition: transform 0.5s ease;
+        }
+
+        .workflow-3d-scene:hover {
+            transform: rotateX(55deg) rotateZ(-25deg);
+        }
+
+        .workflow-3d-layer {
+            position: absolute;
+            width: 100%;
+            height: 90px;
+            background: rgba(255, 255, 255, 0.03);
+            border: 1.5px solid rgba(255, 255, 255, 0.08);
+            border-radius: 20px;
+            backdrop-filter: blur(15px);
+            padding: 16px 24px;
+            transform-style: preserve-3d;
+            transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+            cursor: pointer;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+        }
+
+        .workflow-3d-layer::before {
+            content: '';
+            position: absolute;
+            inset: -1.5px;
+            border-radius: 20px;
+            padding: 1.5px;
+            background: linear-gradient(135deg, rgba(255, 255, 255, 0.1), transparent);
+            -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+            -webkit-mask-composite: xor;
+            mask-composite: exclude;
+            pointer-events: none;
+        }
+
+        .layer-1 { transform: translateZ(0px); border-color: rgba(99, 102, 241, 0.2); }
+        .layer-2 { transform: translateZ(110px); border-color: rgba(168, 85, 247, 0.2); }
+        .layer-3 { transform: translateZ(220px); border-color: rgba(236, 72, 153, 0.2); }
+        .layer-4 { transform: translateZ(330px); border-color: rgba(16, 185, 129, 0.2); }
+
+        /* Floating animations for layers */
+        @keyframes float-1 { 0%, 100% { transform: translateZ(0px); } 50% { transform: translateZ(10px); } }
+        @keyframes float-2 { 0%, 100% { transform: translateZ(110px); } 50% { transform: translateZ(125px); } }
+        @keyframes float-3 { 0%, 100% { transform: translateZ(220px); } 50% { transform: translateZ(240px); } }
+        @keyframes float-4 { 0%, 100% { transform: translateZ(330px); } 50% { transform: translateZ(355px); } }
+
+        .layer-1:not(.hovered) { animation: float-1 6s infinite ease-in-out alternate; }
+        .layer-2:not(.hovered) { animation: float-2 6s infinite ease-in-out alternate 1s; }
+        .layer-3:not(.hovered) { animation: float-3 6s infinite ease-in-out alternate 2s; }
+        .layer-4:not(.hovered) { animation: float-4 6s infinite ease-in-out alternate 3s; }
+
+        /* Hover elevation and lighting */
+        .layer-1:hover, .layer-1.hovered {
+            transform: translateZ(25px) scale(1.03);
+            background: rgba(99, 102, 241, 0.08);
+            border-color: rgba(99, 102, 241, 0.5);
+            box-shadow: 0 0 50px rgba(99, 102, 241, 0.3);
+        }
+        .layer-2:hover, .layer-2.hovered {
+            transform: translateZ(145px) scale(1.03);
+            background: rgba(168, 85, 247, 0.08);
+            border-color: rgba(168, 85, 247, 0.5);
+            box-shadow: 0 0 50px rgba(168, 85, 247, 0.3);
+        }
+        .layer-3:hover, .layer-3.hovered {
+            transform: translateZ(265px) scale(1.03);
+            background: rgba(236, 72, 153, 0.08);
+            border-color: rgba(236, 72, 153, 0.5);
+            box-shadow: 0 0 50px rgba(236, 72, 153, 0.3);
+        }
+        .layer-4:hover, .layer-4.hovered {
+            transform: translateZ(385px) scale(1.03);
+            background: rgba(16, 185, 129, 0.08);
+            border-color: rgba(16, 185, 129, 0.5);
+            box-shadow: 0 0 50px rgba(16, 185, 129, 0.3);
+        }
+
+        .layer-content {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            height: 100%;
+            transform: translateZ(10px);
+        }
+
+        .layer-step {
+            font-size: 0.8rem;
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+            font-weight: 700;
+            color: var(--text-muted);
+        }
+
+        .layer-content h3 {
+            font-size: 1.15rem;
+            font-weight: 600;
+            color: #fff;
+        }
+
+        .layer-badge {
+            background: rgba(255, 255, 255, 0.05);
+            padding: 4px 10px;
+            border-radius: 50px;
+            font-size: 0.75rem;
+            font-weight: 600;
+            color: var(--text-muted);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .layer-1 .layer-badge { background: rgba(99, 102, 241, 0.15); color: #818cf8; border-color: rgba(99, 102, 241, 0.2); }
+        .layer-2 .layer-badge { background: rgba(168, 85, 247, 0.15); color: #c084fc; border-color: rgba(168, 85, 247, 0.2); }
+        .layer-3 .layer-badge { background: rgba(236, 72, 153, 0.15); color: #f472b6; border-color: rgba(236, 72, 153, 0.2); }
+        .layer-4 .layer-badge { background: rgba(16, 185, 129, 0.15); color: #34d399; border-color: rgba(16, 185, 129, 0.2); }
+
+        /* Vertical Connector Lines in 3D Scene */
+        .workflow-3d-connector {
+            position: absolute;
+            left: 30px;
+            width: 2px;
+            background: linear-gradient(180deg, var(--secondary-glow), var(--primary-glow));
+            transform-style: preserve-3d;
+            opacity: 0.3;
+        }
+
+        .c-1 { bottom: 90px; height: 110px; transform: translateZ(45px); }
+        .c-2 { bottom: 90px; height: 110px; transform: translateZ(155px); }
+        .c-3 { bottom: 90px; height: 110px; transform: translateZ(265px); }
+
+        /* Workflow detail cards on the side */
+        .workflow-details {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+
+        .detail-card {
+            display: flex;
+            gap: 24px;
+            background: rgba(255, 255, 255, 0.02);
+            border: 1px solid var(--surface-border);
+            border-radius: 20px;
+            padding: 24px;
+            transition: all 0.3s ease;
+            cursor: pointer;
+        }
+
+        .detail-card:hover, .detail-card.active {
+            background: rgba(255, 255, 255, 0.04);
+            border-color: rgba(168, 85, 247, 0.3);
+            transform: translateX(10px);
+        }
+
+        .detail-number {
+            font-size: 1.8rem;
+            font-weight: 800;
+            line-height: 1;
+            color: rgba(255, 255, 255, 0.15);
+            transition: color 0.3s ease;
+        }
+
+        .detail-card.active .detail-number {
+            color: var(--secondary-glow);
+        }
+
+        .detail-info h4 {
+            font-size: 1.25rem;
+            font-weight: 600;
+            color: #fff;
+            margin-bottom: 8px;
+        }
+
+        .detail-info p {
+            font-size: 0.95rem;
+            color: var(--text-muted);
+            line-height: 1.6;
+        }
+
         /* Responsive */
         @media (max-width: 992px) {
 
@@ -622,6 +829,47 @@
 
             .section-header h2 {
                 font-size: 2.4rem;
+            }
+
+            /* 3D Workflow Responsive overrides */
+            .workflow-container {
+                grid-template-columns: 1fr;
+                gap: 50px;
+            }
+
+            .workflow-3d-wrapper {
+                height: 420px;
+            }
+
+            .workflow-3d-scene {
+                width: 290px;
+                height: 300px;
+                transform: rotateX(50deg) rotateZ(-25deg);
+            }
+
+            .workflow-3d-scene:hover {
+                transform: rotateX(45deg) rotateZ(-15deg);
+            }
+
+            .layer-1 { transform: translateZ(0px); }
+            .layer-2 { transform: translateZ(80px); }
+            .layer-3 { transform: translateZ(160px); }
+            .layer-4 { transform: translateZ(240px); }
+
+            @keyframes float-1 { 0%, 100% { transform: translateZ(0px); } 50% { transform: translateZ(8px); } }
+            @keyframes float-2 { 0%, 100% { transform: translateZ(80px); } 50% { transform: translateZ(90px); } }
+            @keyframes float-3 { 0%, 100% { transform: translateZ(160px); } 50% { transform: translateZ(172px); } }
+            @keyframes float-4 { 0%, 100% { transform: translateZ(240px); } 50% { transform: translateZ(255px); } }
+
+            .workflow-3d-layer:hover, .workflow-3d-layer.hovered {
+                transform: translateZ(20px) scale(1.02);
+            }
+            .layer-2:hover, .layer-2.hovered { transform: translateZ(100px) scale(1.02); }
+            .layer-3:hover, .layer-3.hovered { transform: translateZ(180px) scale(1.02); }
+            .layer-4:hover, .layer-4.hovered { transform: translateZ(260px) scale(1.02); }
+
+            .workflow-3d-connector {
+                display: none;
             }
         }
 
@@ -736,6 +984,88 @@
                 <h3>Workflow Automation</h3>
                 <p>Hyper-automate complex recurring business logic, content delivery, and community management using
                     smart NLP-driven autonomous workflows.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- 3D AI Workflow Section -->
+    <section id="workflow" class="container workflow-section">
+        <div class="section-header reveal">
+            <h2>Our 3D AI Workflow</h2>
+            <p>How we engineer and execute intelligence pipelines, from ingestion to real-time agentic actions.</p>
+        </div>
+        <div class="workflow-container reveal">
+            <!-- 3D Isometric Workflow Presentation -->
+            <div class="workflow-3d-wrapper">
+                <div class="workflow-3d-scene">
+                    <!-- Base Layer -->
+                    <div class="workflow-3d-layer layer-1" data-step="1">
+                        <div class="layer-content">
+                            <span class="layer-step">Step 01</span>
+                            <h3>API Ingestion & Data Pipeline</h3>
+                            <span class="layer-badge">Ingest</span>
+                        </div>
+                    </div>
+                    <!-- Processing Layer -->
+                    <div class="workflow-3d-layer layer-2" data-step="2">
+                        <div class="layer-content">
+                            <span class="layer-step">Step 02</span>
+                            <h3>LLM Reasoning & RAG</h3>
+                            <span class="layer-badge">Processing</span>
+                        </div>
+                    </div>
+                    <!-- Security Layer -->
+                    <div class="workflow-3d-layer layer-3" data-step="3">
+                        <div class="layer-content">
+                            <span class="layer-step">Step 03</span>
+                            <h3>Advanced Verification & Validation</h3>
+                            <span class="layer-badge">Security</span>
+                        </div>
+                    </div>
+                    <!-- Output Layer -->
+                    <div class="workflow-3d-layer layer-4" data-step="4">
+                        <div class="layer-content">
+                            <span class="layer-step">Step 04</span>
+                            <h3>Agentic Execution & Output</h3>
+                            <span class="layer-badge">Outputs</span>
+                        </div>
+                    </div>
+                    <!-- Connectors -->
+                    <div class="workflow-3d-connector c-1"></div>
+                    <div class="workflow-3d-connector c-2"></div>
+                    <div class="workflow-3d-connector c-3"></div>
+                </div>
+            </div>
+            <!-- Workflow Descriptions on side -->
+            <div class="workflow-details">
+                <div class="detail-card active" data-step="1">
+                    <div class="detail-number">01</div>
+                    <div class="detail-info">
+                        <h4>Secure Ingestion & Connectivity</h4>
+                        <p>We hook into client-side communication channels (voice, chat, social media) using standard API protocols and local MCP servers, translating unstructured inputs into structured database matrices.</p>
+                    </div>
+                </div>
+                <div class="detail-card" data-step="2">
+                    <div class="detail-number">02</div>
+                    <div class="detail-info">
+                        <h4>Semantic Processing & Retrieval</h4>
+                        <p>Inputs are vectorized and processed through advanced RAG workflows to capture domain context instantly. Agentic LLMs determine the optimal next actions based on enterprise knowledge policies.</p>
+                    </div>
+                </div>
+                <div class="detail-card" data-step="3">
+                    <div class="detail-number">03</div>
+                    <div class="detail-info">
+                        <h4>Anti-Spoofing & Content Safety</h4>
+                        <p>We process image, text, and video payloads through guardrails and liveness detection gates to guarantee that interactions are verified and free of spoof attacks or deepfakes.</p>
+                    </div>
+                </div>
+                <div class="detail-card" data-step="4">
+                    <div class="detail-number">04</div>
+                    <div class="detail-info">
+                        <h4>Automated Deliveries & Actions</h4>
+                        <p>The validated response is pushed out: making bookings, speaking back over customer voice calls, publishing growth comments, or securing private Telegram channels with cryptographic links.</p>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
@@ -1017,6 +1347,36 @@
                 document.querySelector(this.getAttribute('href')).scrollIntoView({
                     behavior: 'smooth'
                 });
+            });
+        });
+
+        // 3D Workflow interactive hover bindings
+        const detailCards = document.querySelectorAll('.detail-card');
+        const layers = document.querySelectorAll('.workflow-3d-layer');
+
+        detailCards.forEach(card => {
+            card.addEventListener('mouseenter', () => {
+                const step = parseInt(card.getAttribute('data-step'));
+                detailCards.forEach(c => c.classList.remove('active'));
+                card.classList.add('active');
+
+                layers.forEach(layer => {
+                    const lStep = parseInt(layer.getAttribute('data-step'));
+                    if (lStep === step) {
+                        layer.classList.add('hovered');
+                    } else {
+                        layer.classList.remove('hovered');
+                    }
+                });
+            });
+        });
+
+        layers.forEach(layer => {
+            layer.addEventListener('mouseenter', () => {
+                const step = layer.getAttribute('data-step');
+                detailCards.forEach(c => c.classList.remove('active'));
+                const matchingCard = document.querySelector(`.detail-card[data-step="${step}"]`);
+                if (matchingCard) matchingCard.classList.add('active');
             });
         });
     </script>
