@@ -1,0 +1,123 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 300" width="100%" height="100%">
+  <defs>
+    <!-- Gradients -->
+    <linearGradient id="cyber-grad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#6366f1"/>
+      <stop offset="50%" stop-color="#a855f7"/>
+      <stop offset="100%" stop-color="#ec4899"/>
+    </linearGradient>
+    <linearGradient id="glow-grad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#ffffff" stop-opacity="0.05"/>
+      <stop offset="100%" stop-color="#ffffff" stop-opacity="0"/>
+    </linearGradient>
+
+    <!-- Glowing Filters -->
+    <filter id="neon-glow" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="8" result="blur1" />
+      <feGaussianBlur stdDeviation="15" result="blur2" />
+      <feMerge>
+        <feMergeNode in="blur2" />
+        <feMergeNode in="blur1" />
+        <feMergeNode in="SourceGraphic" />
+      </feMerge>
+    </filter>
+  </defs>
+
+  <style>
+    @keyframes pulse {
+      0%, 100% { transform: scale(1); opacity: 0.8; }
+      50% { transform: scale(1.1); opacity: 1; filter: drop-shadow(0 0 15px rgba(168, 85, 247, 0.6)); }
+    }
+    @keyframes wave {
+      0% { stroke-dashoffset: 0; }
+      100% { stroke-dashoffset: -100; }
+    }
+    @keyframes float {
+      0%, 100% { transform: translateY(0px); }
+      50% { transform: translateY(-8px); }
+    }
+    @keyframes orbit {
+      from { transform: rotate(0deg); }
+      to { transform: rotate(360deg); }
+    }
+    .core-node {
+      transform-origin: 600px 150px;
+      animation: pulse 4s ease-in-out infinite;
+    }
+    .wave-line {
+      stroke-dasharray: 12, 18;
+      animation: wave 4s linear infinite;
+    }
+    .floating-node {
+      animation: float 5s ease-in-out infinite;
+    }
+    .rotating-ring {
+      transform-origin: 600px 150px;
+      animation: orbit 20s linear infinite;
+    }
+    .grid-bg {
+      opacity: 0.08;
+    }
+  </style>
+
+  <!-- Background -->
+  <rect width="1200" height="300" rx="16" fill="#08090d" stroke="#1e293b" stroke-width="1.5"/>
+  <rect width="1200" height="300" rx="16" fill="url(#glow-grad)"/>
+
+  <!-- Grid Pattern -->
+  <g class="grid-bg">
+    <path d="M 0,30 L 1200,30 M 0,60 L 1200,60 M 0,90 L 1200,90 M 0,120 L 1200,120 M 0,150 L 1200,150 M 0,180 L 1200,180 M 0,210 L 1200,210 M 0,240 L 1200,240 M 0,270 L 1200,270" stroke="#ffffff" stroke-width="0.5"/>
+    <path d="M 60,0 L 60,300 M 120,0 L 120,300 M 180,0 L 180,300 M 240,0 L 240,300 M 300,0 L 300,300 M 360,0 L 360,300 M 420,0 L 420,300 M 480,0 L 480,300 M 540,0 L 540,300 M 600,0 L 600,300 M 660,0 L 660,300 M 720,0 L 720,300 M 780,0 L 780,300 M 840,0 L 840,300 M 900,0 L 900,300 M 960,0 L 960,300 M 1020,0 L 1020,300 M 1080,0 L 1080,300 M 1140,0 L 1140,300" stroke="#ffffff" stroke-width="0.5"/>
+  </g>
+
+  <!-- Network Connections (Glowing Background Lines) -->
+  <g opacity="0.3" stroke="url(#cyber-grad)" stroke-width="1.5" fill="none">
+    <!-- Concentric Circles from Core -->
+    <circle cx="600" cy="150" r="100" class="rotating-ring" stroke-dasharray="10, 15"/>
+    <circle cx="600" cy="150" r="180" class="rotating-ring" style="animation-direction: reverse; animation-duration: 30s;" stroke-dasharray="20, 30"/>
+    <circle cx="600" cy="150" r="260" class="rotating-ring" style="animation-duration: 40s;" stroke-dasharray="40, 40"/>
+
+    <!-- Dynamic Flow Pathways -->
+    <path d="M 150,150 C 350,50 450,250 600,150" class="wave-line"/>
+    <path d="M 600,150 C 750,50 850,250 1050,150" class="wave-line" style="animation-delay: -1s;"/>
+    <path d="M 350,240 C 450,150 550,150 600,150" class="wave-line" style="animation-delay: -2s;"/>
+    <path d="M 600,150 C 650,150 750,150 850,60" class="wave-line" style="animation-delay: -3s;"/>
+  </g>
+
+  <!-- Pulsing Connecting Core -->
+  <g class="core-node">
+    <circle cx="600" cy="150" r="30" fill="url(#cyber-grad)" filter="url(#neon-glow)" opacity="0.8"/>
+    <circle cx="600" cy="150" r="15" fill="#ffffff"/>
+  </g>
+
+  <!-- Peripheral Nodes with Wave Animation -->
+  <g fill="#08090d" stroke="url(#cyber-grad)" stroke-width="2">
+    <!-- Left-side clusters -->
+    <circle cx="150" cy="150" r="12" class="floating-node" style="animation-delay: 0s;"/>
+    <circle cx="350" cy="240" r="8" class="floating-node" style="animation-delay: 1s;"/>
+    <circle cx="300" cy="70" r="10" class="floating-node" style="animation-delay: 2s;"/>
+    
+    <!-- Right-side clusters -->
+    <circle cx="1050" cy="150" r="12" class="floating-node" style="animation-delay: 0.5s;"/>
+    <circle cx="850" cy="60" r="8" class="floating-node" style="animation-delay: 1.5s;"/>
+    <circle cx="900" cy="230" r="10" class="floating-node" style="animation-delay: 2.5s;"/>
+  </g>
+
+  <!-- Internal Node Accents (White centers) -->
+  <g fill="#ffffff">
+    <circle cx="150" cy="150" r="4" class="floating-node" style="animation-delay: 0s;"/>
+    <circle cx="350" cy="240" r="2.5" class="floating-node" style="animation-delay: 1s;"/>
+    <circle cx="300" cy="70" r="3.5" class="floating-node" style="animation-delay: 2s;"/>
+    <circle cx="1050" cy="150" r="4" class="floating-node" style="animation-delay: 0.5s;"/>
+    <circle cx="850" cy="60" r="2.5" class="floating-node" style="animation-delay: 1.5s;"/>
+    <circle cx="900" cy="230" r="3.5" class="floating-node" style="animation-delay: 2.5s;"/>
+  </g>
+
+  <!-- Glowing HUD Elements -->
+  <g font-family="'Inter', -apple-system, sans-serif" font-size="10" fill="#94a3b8" opacity="0.6">
+    <text x="30" y="45">[ AI ORCHESTRATION LAYER ]</text>
+    <text x="30" y="275">LATENCY: &lt; 50ms</text>
+    <text x="1030" y="45">STATUS: OPERATIONAL</text>
+    <text x="1060" y="275">V. 2.0.26</text>
+  </g>
+</svg>

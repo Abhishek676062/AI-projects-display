@@ -1,29 +1,17 @@
-<table width="100%">
-  <tr>
-    <td align="left" border="0">
-      <a href="https://shantiinfosoft.com/" target="_blank">
-        <img src="https://img.shields.io/badge/Official%20Website-shantiinfosoft.com-blue?style=flat-square&logo=google-chrome&logoColor=white&color=6366f1" alt="Website" />
-      </a>
-    </td>
-    <td align="right" border="0">
-      <a href="https://github.com/shanti-python" target="_blank">
-        <img src="https://img.shields.io/github/followers/shanti-python?label=Follow&style=social" alt="Follow" />
-      </a>
-    </td>
-  </tr>
-</table>
-
-<p align="center">
-  <a href="https://shantiinfosoft.com/" target="_blank"><b>Official Site</b></a> •
-  <a href="https://ai-projects-display.vercel.app/" target="_blank"><b>Live Showcase</b></a> •
-  <a href="#🎨-system-architecture"><b>Architecture</b></a> •
-  <a href="#⚡-automated-pipeline-flow"><b>Workflow</b></a> •
-  <a href="#🚀-core-competencies-demonstrated"><b>AI Capabilities</b></a> •
-  <a href="#where-to-find-me"><b>Contact</b></a>
+<p align="right">
+  <a href="https://github.com/shanti-python" target="_blank">
+    <img src="https://img.shields.io/github/followers/shanti-python?label=Follow&style=social" alt="Follow" />
+  </a>
 </p>
 
 <p align="center">
-  <img src="./assets/banner.png" width="100%" alt="Repository Hero Banner">
+  <a href="https://shantiinfosoft.com/" target="_blank">
+    <img src="https://img.shields.io/badge/Official%20Website-shantiinfosoft.com-blue?style=flat-square&logo=google-chrome&logoColor=white&color=6366f1" alt="Website" />
+  </a>
+</p>
+
+<p align="center">
+  <img src="./assets/banner.svg" width="100%" alt="Repository Hero Banner">
 </p>
 
 <p align="center">
