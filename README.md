@@ -18,7 +18,7 @@
 </p>
 
 <p align="center">
-  <a href="#installation">Live Demo</a> •
+  <a href="https://ai-projects-display.vercel.app/" target="_blank">Live Demo</a> •
   <a href="#project-structure">Documentation</a> •
   <a href="https://github.com/shanti-python/Ai-Project-showcase/issues">Report Issue</a>
 </p>
@@ -85,6 +85,7 @@ AI-projects-display/
 │   ├── architecture.png  # Platform system architecture
 │   └── workflow.png      # AI processing workflow graphic
 ├── app.py                # Flask Application Entrypoint
+├── vercel.json           # Vercel serverless configuration
 ├── render.yaml           # Render Infrastructure-as-Code Configuration
 ├── requirements.txt      # Python Packages
 ├── templates/
@@ -167,12 +168,18 @@ The web application exposes a simple, lightweight routing structure:
 
 ## 🌍 Cloud Deployment
 
-The repository includes native support for Render deployment via `render.yaml`. 
+This showcase is engineered to run seamlessly on both **Vercel** and **Render**.
+
+### Deploying to Vercel (Recommended)
+This repository includes a pre-configured `vercel.json` for Serverless Flask execution:
+1. Install Vercel CLI: `npm i -g vercel`
+2. Run `vercel` in the project root directory.
+3. Vercel will build dependencies using the `@vercel/python` builder and serve endpoints serverless.
 
 ### Deploying to Render
 1. Connect your GitHub repository to Render.
 2. Select **Web Service**.
-3. Render will auto-detect the `render.yaml` file, executing the following configurations:
+3. Render will auto-detect the `render.yaml` file and apply:
    * **Build Command:** `pip install -r requirements.txt`
    * **Start Command:** `gunicorn app:app`
 
