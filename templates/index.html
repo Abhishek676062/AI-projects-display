@@ -8,7 +8,8 @@
     <!-- Favicon -->
     <link rel="icon" type="image/png" href="https://www.image.shantiinfosoft.com/images/shanti-small-light.png">
     <!-- Modern Typography Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap"
+    <link
+        href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap"
         rel="stylesheet">
     <!-- Lucide Icons -->
     <script src="https://unpkg.com/lucide@latest"></script>
@@ -19,11 +20,14 @@
             --panel-hover: rgba(255, 255, 255, 0.05);
             --border: rgba(255, 255, 255, 0.05);
             --border-hover: rgba(255, 255, 255, 0.15);
-            --primary: #6366f1; /* Indigo */
+            --primary: #6366f1;
+            /* Indigo */
             --primary-rgb: 99, 102, 241;
-            --secondary: #d946ef; /* Fuchsia */
+            --secondary: #d946ef;
+            /* Fuchsia */
             --secondary-rgb: 217, 70, 239;
-            --cyan: #06b6d4; /* Neon Cyan */
+            --cyan: #06b6d4;
+            /* Neon Cyan */
             --cyan-rgb: 6, 182, 212;
             --text-main: #f3f4f6;
             --text-muted: #9ca3af;
@@ -53,8 +57,8 @@
             left: 0;
             width: 100%;
             height: 100%;
-            background: linear-gradient(rgba(18, 16, 16, 0) 50%, rgba(0, 0, 0, 0.25) 50%), 
-                        linear-gradient(90deg, rgba(99, 102, 241, 0.02), rgba(217, 70, 239, 0.01), rgba(6, 182, 212, 0.02));
+            background: linear-gradient(rgba(18, 16, 16, 0) 50%, rgba(0, 0, 0, 0.25) 50%),
+                linear-gradient(90deg, rgba(99, 102, 241, 0.02), rgba(217, 70, 239, 0.01), rgba(6, 182, 212, 0.02));
             z-index: 999;
             background-size: 100% 4px, 6px 100%;
             pointer-events: none;
@@ -68,7 +72,7 @@
             width: 100vw;
             height: 100vh;
             background-size: 60px 60px;
-            background-image: 
+            background-image:
                 linear-gradient(to right, rgba(255, 255, 255, 0.01) 1px, transparent 1px),
                 linear-gradient(to bottom, rgba(255, 255, 255, 0.01) 1px, transparent 1px);
             z-index: -2;
@@ -88,7 +92,11 @@
         }
 
         /* Utility classes */
-        h1, h2, h3, h4, .logo {
+        h1,
+        h2,
+        h3,
+        h4,
+        .logo {
             font-family: 'Space Grotesk', sans-serif;
             font-weight: 700;
             letter-spacing: -0.02em;
@@ -337,8 +345,17 @@
         }
 
         @keyframes pulse-glow {
-            0%, 100% { opacity: 0.5; filter: drop-shadow(0 0 1px var(--cyan)); }
-            50% { opacity: 1; filter: drop-shadow(0 0 8px var(--cyan)); }
+
+            0%,
+            100% {
+                opacity: 0.5;
+                filter: drop-shadow(0 0 1px var(--cyan));
+            }
+
+            50% {
+                opacity: 1;
+                filter: drop-shadow(0 0 8px var(--cyan));
+            }
         }
 
         .hero-content h1 {
@@ -458,8 +475,13 @@
         }
 
         @keyframes float-y {
-            0% { transform: translateY(0px) rotate(-1deg); }
-            100% { transform: translateY(-15px) rotate(1deg); }
+            0% {
+                transform: translateY(0px) rotate(-1deg);
+            }
+
+            100% {
+                transform: translateY(-15px) rotate(1deg);
+            }
         }
 
         /* Common Section Styling */
@@ -619,14 +641,16 @@
             font-size: 16px;
         }
 
-        .tech-node:hover, .tech-node.active {
+        .tech-node:hover,
+        .tech-node.active {
             color: white;
             border-color: var(--cyan);
             background: rgba(var(--cyan-rgb), 0.1);
             box-shadow: 0 0 20px rgba(var(--cyan-rgb), 0.3);
         }
 
-        .tech-node:hover i, .tech-node.active i {
+        .tech-node:hover i,
+        .tech-node.active i {
             color: var(--cyan);
         }
 
@@ -675,12 +699,11 @@
                 left: 50px;
                 right: 50px;
                 height: 2px;
-                background: linear-gradient(90deg, 
-                    var(--primary) 0%, 
-                    var(--secondary) 33%, 
-                    var(--accent-pink) 66%, 
-                    var(--cyan) 100%
-                );
+                background: linear-gradient(90deg,
+                        var(--primary) 0%,
+                        var(--secondary) 33%,
+                        var(--accent-pink) 66%,
+                        var(--cyan) 100%);
                 opacity: 0.15;
                 z-index: 0;
                 transform: translateY(-50%);
@@ -731,10 +754,25 @@
             pointer-events: none;
         }
 
-        .workflow-card.step-1 { --card-rgb: var(--primary-rgb); --card-color: var(--primary); }
-        .workflow-card.step-2 { --card-rgb: var(--secondary-rgb); --card-color: var(--secondary); }
-        .workflow-card.step-3 { --card-rgb: 236, 72, 153; --card-color: var(--accent-pink); }
-        .workflow-card.step-4 { --card-rgb: var(--cyan-rgb); --card-color: var(--cyan); }
+        .workflow-card.step-1 {
+            --card-rgb: var(--primary-rgb);
+            --card-color: var(--primary);
+        }
+
+        .workflow-card.step-2 {
+            --card-rgb: var(--secondary-rgb);
+            --card-color: var(--secondary);
+        }
+
+        .workflow-card.step-3 {
+            --card-rgb: 236, 72, 153;
+            --card-color: var(--accent-pink);
+        }
+
+        .workflow-card.step-4 {
+            --card-rgb: var(--cyan-rgb);
+            --card-color: var(--cyan);
+        }
 
         .workflow-card:hover {
             transform: translateY(-8px);
@@ -984,9 +1022,17 @@
             border-radius: 50%;
         }
 
-        .device-dot.red { background: #ef4444; }
-        .device-dot.yellow { background: #eab308; }
-        .device-dot.green { background: #22c55e; }
+        .device-dot.red {
+            background: #ef4444;
+        }
+
+        .device-dot.yellow {
+            background: #eab308;
+        }
+
+        .device-dot.green {
+            background: #22c55e;
+        }
 
         .device-address {
             margin-left: 12px;
@@ -1040,9 +1086,17 @@
         }
 
         @keyframes laser-scan {
-            0% { top: 0%; }
-            50% { top: 100%; }
-            100% { top: 0%; }
+            0% {
+                top: 0%;
+            }
+
+            50% {
+                top: 100%;
+            }
+
+            100% {
+                top: 0%;
+            }
         }
 
         .project-tag {
@@ -1145,7 +1199,7 @@
             justify-content: center;
             margin-bottom: 24px;
             background: radial-gradient(circle, rgba(var(--primary-rgb), 0.03) 0%, transparent 70%);
-            box-shadow: 0 0 15px rgba(0,0,0,0.4);
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.4);
         }
 
         .stat-circle::before {
@@ -1163,8 +1217,13 @@
         }
 
         @keyframes rotate-border {
-            0% { transform: rotate(0deg); }
-            100% { transform: rotate(360deg); }
+            0% {
+                transform: rotate(0deg);
+            }
+
+            100% {
+                transform: rotate(360deg);
+            }
         }
 
         .stat-number {
@@ -1263,7 +1322,8 @@
             font-weight: 600;
         }
 
-        .form-group input, .form-group textarea {
+        .form-group input,
+        .form-group textarea {
             background: rgba(255, 255, 255, 0.01);
             border: 1px solid var(--border);
             border-radius: 12px;
@@ -1275,7 +1335,8 @@
             transition: all 0.3s;
         }
 
-        .form-group input:focus, .form-group textarea:focus {
+        .form-group input:focus,
+        .form-group textarea:focus {
             border-color: rgba(var(--cyan-rgb), 0.5);
             background: rgba(255, 255, 255, 0.03);
             box-shadow: 0 0 15px rgba(var(--cyan-rgb), 0.1);
@@ -1373,7 +1434,8 @@
 
         .modal-body {
             position: relative;
-            padding-bottom: 56.25%; /* 16:9 Aspect Ratio */
+            padding-bottom: 56.25%;
+            /* 16:9 Aspect Ratio */
             height: 0;
             overflow: hidden;
         }
@@ -1555,7 +1617,7 @@
             backdrop-filter: blur(20px);
             position: relative;
             overflow: hidden;
-            box-shadow: 0 20px 50px rgba(0,0,0,0.5);
+            box-shadow: 0 20px 50px rgba(0, 0, 0, 0.5);
         }
 
         .connect-form-container::before {
@@ -1679,7 +1741,7 @@
             left: -100%;
             width: 100%;
             height: 100%;
-            background: linear-gradient(90deg, transparent, rgba(255,255,255,0.35), transparent);
+            background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.35), transparent);
         }
 
         .cyber-submit-btn:hover .btn-scanline {
@@ -1687,9 +1749,17 @@
         }
 
         @keyframes btn-sweep {
-            0% { left: -100%; }
-            50% { left: 100%; }
-            100% { left: 100%; }
+            0% {
+                left: -100%;
+            }
+
+            50% {
+                left: 100%;
+            }
+
+            100% {
+                left: 100%;
+            }
         }
 
         /* Clipboard Copy Alert Animation */
@@ -1755,7 +1825,7 @@
             inset: -1px;
             border-radius: 50%;
             padding: 1px;
-            background: linear-gradient(135deg, rgba(255,255,255,0.25), transparent, rgba(255,255,255,0.1));
+            background: linear-gradient(135deg, rgba(255, 255, 255, 0.25), transparent, rgba(255, 255, 255, 0.1));
             -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
             -webkit-mask-composite: xor;
             mask-composite: exclude;
@@ -1838,7 +1908,8 @@
                 gap: 30px;
             }
 
-            .project-row, .project-row:nth-child(even) {
+            .project-row,
+            .project-row:nth-child(even) {
                 grid-template-columns: 1fr;
                 gap: 50px;
             }
@@ -1894,7 +1965,8 @@
             }
 
             nav .btn-glow {
-                display: none; /* Hide desktop top-level CTA */
+                display: none;
+                /* Hide desktop top-level CTA */
             }
 
             .hero-content h1 {
@@ -1993,7 +2065,8 @@
             <a href="#technologies" class="mobile-nav-link">Technology</a>
             <a href="#workflow" class="mobile-nav-link">Workflow</a>
             <a href="#projects" class="mobile-nav-link">Showcase</a>
-            <a href="#contact" class="mobile-nav-link btn-glow" style="margin-top: 15px; display: inline-flex; width: fit-content; text-align: center;">
+            <a href="#contact" class="mobile-nav-link btn-glow"
+                style="margin-top: 15px; display: inline-flex; width: fit-content; text-align: center;">
                 <span>Get Started</span>
                 <i data-lucide="arrow-right"></i>
             </a>
@@ -2006,11 +2079,11 @@
             <div class="hero-content">
                 <div class="hero-badge">
                     <i data-lucide="sparkles"></i>
-                    <span>Next-Gen Enterprise AI</span>
+                    <span>Enterprise Autonomous AI</span>
                 </div>
-                <h1>Elevate Operations With <span class="text-gradient">Agentic Intel</span></h1>
-                <p>We build customized, enterprise-grade AI agents, liveness detection pipelines, and advanced vector search capabilities that multiply business efficiency and secure operations 24/7.</p>
-                
+                <h1>Architecting Next-Gen <span class="text-gradient">Agentic AI Solutions</span></h1>
+                <p>We design and deploy customized, enterprise-grade AI agents, secure liveness detection pipelines, and advanced vector search capabilities that maximize efficiency and automate decision-making 24/7.</p>
+
                 <div class="hero-cta">
                     <a href="#projects" class="btn-glow">
                         <span>Explore Showcase</span>
@@ -2020,24 +2093,6 @@
                         <span>Our Capabilities</span>
                         <i data-lucide="layers"></i>
                     </a>
-                </div>
-
-                <div class="hero-telemetry-panel">
-                    <div class="telemetry-item">
-                        <span class="label">Platform Status</span>
-                        <span class="value">
-                            <span class="telemetry-indicator"></span>
-                            Active
-                        </span>
-                    </div>
-                    <div class="telemetry-item" style="border-left: 1px solid rgba(255,255,255,0.08); padding-left: 20px;">
-                        <span class="label">Neural Threads</span>
-                        <span class="value">1,024/sec</span>
-                    </div>
-                    <div class="telemetry-item" style="border-left: 1px solid rgba(255,255,255,0.08); padding-left: 20px;">
-                        <span class="label">Engine Ver</span>
-                        <span class="value">v4.8.2</span>
-                    </div>
                 </div>
             </div>
 
@@ -2064,12 +2119,14 @@
     </main>
 
     <!-- Services Capabilities Section -->
-    <section id="services" style="background: radial-gradient(circle at 10% 30%, rgba(var(--secondary-rgb), 0.02) 0%, transparent 60%);">
+    <section id="services"
+        style="background: radial-gradient(circle at 10% 30%, rgba(var(--secondary-rgb), 0.02) 0%, transparent 60%);">
         <div class="container">
             <div class="section-header reveal">
                 <span class="section-badge">Capabilities</span>
                 <h2>Enterprise AI Architectures</h2>
-                <p>From custom vector search to real-time auditory processing pipelines, we construct production-ready AI infrastructures tailored to your growth metrics.</p>
+                <p>From custom vector search to real-time auditory processing pipelines, we construct production-ready
+                    AI infrastructures tailored to your growth metrics.</p>
             </div>
 
             <div class="services-grid">
@@ -2079,7 +2136,8 @@
                         <i data-lucide="bot"></i>
                     </div>
                     <h3>Agentic AI & MCP</h3>
-                    <p>Deploy autonomous AI agents utilizing the Model Context Protocol (MCP) to securely interact with external databases, servers, and custom local APIs on autopilot.</p>
+                    <p>Deploy autonomous AI agents utilizing the Model Context Protocol (MCP) to securely interact with
+                        external databases, servers, and custom local APIs on autopilot.</p>
                 </div>
                 <!-- Cap 2 -->
                 <div class="tilt-card service-card reveal">
@@ -2087,7 +2145,8 @@
                         <i data-lucide="brain-circuit"></i>
                     </div>
                     <h3>Generative AI & LLMs</h3>
-                    <p>Custom fine-tuned Large Language Models trained on proprietary corporate documentation, maintaining high alignment with internal security policies.</p>
+                    <p>Custom fine-tuned Large Language Models trained on proprietary corporate documentation,
+                        maintaining high alignment with internal security policies.</p>
                 </div>
                 <!-- Cap 3 -->
                 <div class="tilt-card service-card reveal">
@@ -2095,7 +2154,8 @@
                         <i data-lucide="database"></i>
                     </div>
                     <h3>Enterprise RAG Solutions</h3>
-                    <p>Highly scalable retrieval-augmented generation pipelines enabling millisecond semantic searches across unstructured PDFs, wikis, and cloud drives.</p>
+                    <p>Highly scalable retrieval-augmented generation pipelines enabling millisecond semantic searches
+                        across unstructured PDFs, wikis, and cloud drives.</p>
                 </div>
                 <!-- Cap 4 -->
                 <div class="tilt-card service-card reveal">
@@ -2103,7 +2163,8 @@
                         <i data-lucide="phone-call"></i>
                     </div>
                     <h3>Conversational Voice AI</h3>
-                    <p>Human-like interactive voice agents with sub-250ms latency, managing customer inquiries, dynamic booking rules, and context-dependent cold calls.</p>
+                    <p>Human-like interactive voice agents with sub-250ms latency, managing customer inquiries, dynamic
+                        booking rules, and context-dependent cold calls.</p>
                 </div>
                 <!-- Cap 5 -->
                 <div class="tilt-card service-card reveal">
@@ -2111,7 +2172,8 @@
                         <i data-lucide="eye"></i>
                     </div>
                     <h3>Computer Vision Security</h3>
-                    <p>Passive/active liveness detection pipelines and micro-expression verification to secure remote onboarding, KYC/AML processes, and secure portals.</p>
+                    <p>Passive/active liveness detection pipelines and micro-expression verification to secure remote
+                        onboarding, KYC/AML processes, and secure portals.</p>
                 </div>
                 <!-- Cap 6 -->
                 <div class="tilt-card service-card reveal">
@@ -2119,7 +2181,8 @@
                         <i data-lucide="zap"></i>
                     </div>
                     <h3>Workflow Automation</h3>
-                    <p>Hyper-automate repetitive backend operations, community moderation workflows, and content generation matrices using smart semantic triggers.</p>
+                    <p>Hyper-automate repetitive backend operations, community moderation workflows, and content
+                        generation matrices using smart semantic triggers.</p>
                 </div>
             </div>
         </div>
@@ -2131,7 +2194,8 @@
             <div class="section-header reveal">
                 <span class="section-badge">Technology Stack</span>
                 <h2>Sovereign & Open Systems</h2>
-                <p>We build our neural architectures using cutting-edge models, robust databases, and lightweight backend environments built to scale.</p>
+                <p>We build our neural architectures using cutting-edge models, robust databases, and lightweight
+                    backend environments built to scale.</p>
             </div>
 
             <div class="tech-container">
@@ -2148,7 +2212,8 @@
                             <i data-lucide="terminal"></i>
                             <span>Interactive Tech Sphere</span>
                         </h3>
-                        <p>Hover over any technology node in the 3D rotating sphere to view its role in our enterprise AI deployments, including processing, models, and integration specs.</p>
+                        <p>Hover over any technology node in the 3D rotating sphere to view its role in our enterprise
+                            AI deployments, including processing, models, and integration specs.</p>
                         <div class="tech-stack">
                             <span class="tech-pill">Python</span>
                             <span class="tech-pill">PyTorch</span>
@@ -2163,12 +2228,14 @@
     </section>
 
     <!-- 3D AI Workflow Section -->
-    <section id="workflow" style="background: radial-gradient(circle at 90% 80%, rgba(var(--primary-rgb), 0.02) 0%, transparent 60%);">
+    <section id="workflow"
+        style="background: radial-gradient(circle at 90% 80%, rgba(var(--primary-rgb), 0.02) 0%, transparent 60%);">
         <div class="container">
             <div class="section-header reveal">
                 <span class="section-badge">Execution</span>
                 <h2>Data Flow Architecture</h2>
-                <p>Our systematic implementation framework transforms raw unstructured inputs into secure, real-time agentic actions.</p>
+                <p>Our systematic implementation framework transforms raw unstructured inputs into secure, real-time
+                    agentic actions.</p>
             </div>
 
             <div class="workflow-cards-grid reveal">
@@ -2184,7 +2251,8 @@
                             <i data-lucide="cable"></i>
                         </div>
                         <h3>API Ingestion & Pipeline</h3>
-                        <p>We hook into customer channels (voice, chat, social media) using standard API protocols and local MCP servers, transforming raw unstructured streams into normalized vector indexes.</p>
+                        <p>We hook into customer channels (voice, chat, social media) using standard API protocols and
+                            local MCP servers, transforming raw unstructured streams into normalized vector indexes.</p>
                         <div class="workflow-tags">
                             <span>MCP Servers</span>
                             <span>Webhooks</span>
@@ -2204,7 +2272,8 @@
                             <i data-lucide="cpu"></i>
                         </div>
                         <h3>LLM Reasoning & RAG</h3>
-                        <p>Context matrices are processed via advanced RAG pipelines. Custom models interpret intent, fetching relevant organizational data in milliseconds for accurate reasoning.</p>
+                        <p>Context matrices are processed via advanced RAG pipelines. Custom models interpret intent,
+                            fetching relevant organizational data in milliseconds for accurate reasoning.</p>
                         <div class="workflow-tags">
                             <span>RAG Pipeline</span>
                             <span>Custom LLMs</span>
@@ -2224,7 +2293,8 @@
                             <i data-lucide="shield-check"></i>
                         </div>
                         <h3>Identity & Guardrails</h3>
-                        <p>Payloads undergo verification. Image, document, and video assets are analyzed through deepface recognition gates to prevent pre-recorded and deepfake spoofs.</p>
+                        <p>Payloads undergo verification. Image, document, and video assets are analyzed through
+                            deepface recognition gates to prevent pre-recorded and deepfake spoofs.</p>
                         <div class="workflow-tags">
                             <span>Anti-Spoofing</span>
                             <span>Face Match</span>
@@ -2244,7 +2314,8 @@
                             <i data-lucide="zap"></i>
                         </div>
                         <h3>Agentic Execution</h3>
-                        <p>Validated responses trigger automated downstream actions: completing client reservations, initiating outbound voice calls, or managing premium social communities.</p>
+                        <p>Validated responses trigger automated downstream actions: completing client reservations,
+                            initiating outbound voice calls, or managing premium social communities.</p>
                         <div class="workflow-tags">
                             <span>API Calls</span>
                             <span>Voice Dialers</span>
@@ -2262,7 +2333,8 @@
             <div class="section-header reveal">
                 <span class="section-badge">Showcase</span>
                 <h2>Featured AI Implementations</h2>
-                <p>Explore our active deployments executing mission-critical customer operations and verification systems around the world.</p>
+                <p>Explore our active deployments executing mission-critical customer operations and verification
+                    systems around the world.</p>
             </div>
 
             <div class="projects-list">
@@ -2271,12 +2343,19 @@
                     <div class="project-content">
                         <span class="project-tag">Agentic RAG Assistant</span>
                         <h3>Redprinting AI</h3>
-                        <p>A sophisticated customer support AI assistant utilizing Retrieval-Augmented Generation (RAG) to query complex company datasets instantly. It seamlessly communicates in both Korean and English.</p>
-                        <p>Equipped with Tool Connectivity and API integration, the assistant triggers external actions directly from chat, forming an end-to-end Agentic workflow for immediate issue resolution.</p>
+                        <p>A sophisticated customer support AI assistant utilizing Retrieval-Augmented Generation (RAG)
+                            to query complex company datasets instantly. It seamlessly communicates in both Korean and
+                            English.</p>
+                        <p>Equipped with Tool Connectivity and API integration, the assistant triggers external actions
+                            directly from chat, forming an end-to-end Agentic workflow for immediate issue resolution.
+                        </p>
                         <ul class="project-features">
-                            <li><i data-lucide="check-circle"></i> <span>Real-time multilingual agent logic (Korean/English)</span></li>
-                            <li><i data-lucide="check-circle"></i> <span>Autonomous function-calling for backend operations</span></li>
-                            <li><i data-lucide="check-circle"></i> <span>Precision semantic search across enterprise knowledge bases</span></li>
+                            <li><i data-lucide="check-circle"></i> <span>Real-time multilingual agent logic
+                                    (Korean/English)</span></li>
+                            <li><i data-lucide="check-circle"></i> <span>Autonomous function-calling for backend
+                                    operations</span></li>
+                            <li><i data-lucide="check-circle"></i> <span>Precision semantic search across enterprise
+                                    knowledge bases</span></li>
                         </ul>
                         <div class="tech-stack">
                             <span class="tech-pill">RAG</span>
@@ -2294,7 +2373,8 @@
                                 <div class="device-address">https://redprinting.ai/console</div>
                             </div>
                             <div class="device-screen">
-                                <iframe src="https://drive.google.com/file/d/1dsvqe1yagLP-Fv_SV7T66VgHY7Vs1PoK/preview" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+                                <iframe src="https://drive.google.com/file/d/1dsvqe1yagLP-Fv_SV7T66VgHY7Vs1PoK/preview"
+                                    allow="autoplay; encrypted-media" allowfullscreen></iframe>
                             </div>
                         </div>
                     </div>
@@ -2305,12 +2385,18 @@
                     <div class="project-content">
                         <span class="project-tag">Identity & Security</span>
                         <h3>AI Identity Verification</h3>
-                        <p>This AI-powered identity verification system compares a person’s ID card photo with their live video to confirm if both represent the same individual. Using advanced face recognition, it calculates identity match accuracy.</p>
-                        <p>Additionally, the system performs liveness detection to check if the person in the video is genuinely live — preventing spoofing attacks from static images, masks, or AI deepfakes.</p>
+                        <p>This AI-powered identity verification system compares a person’s ID card photo with their
+                            live video to confirm if both represent the same individual. Using advanced face
+                            recognition, it calculates identity match accuracy.</p>
+                        <p>Additionally, the system performs liveness detection to check if the person in the video is
+                            genuinely live — preventing spoofing attacks from static images, masks, or AI deepfakes.</p>
                         <ul class="project-features">
-                            <li><i data-lucide="check-circle"></i> <span>Real-time facial similarity matching (similarity score: 98.4%)</span></li>
-                            <li><i data-lucide="check-circle"></i> <span>Biometric depth & motion liveness analysis</span></li>
-                            <li><i data-lucide="check-circle"></i> <span>Anti-spoofing guardrails blocking digital & mask replays</span></li>
+                            <li><i data-lucide="check-circle"></i> <span>Real-time facial similarity matching
+                                    (similarity score: 98.4%)</span></li>
+                            <li><i data-lucide="check-circle"></i> <span>Biometric depth & motion liveness
+                                    analysis</span></li>
+                            <li><i data-lucide="check-circle"></i> <span>Anti-spoofing guardrails blocking digital &
+                                    mask replays</span></li>
                         </ul>
                         <div class="tech-stack">
                             <span class="tech-pill">Computer Vision</span>
@@ -2328,7 +2414,9 @@
                                 <div class="device-address">https://secure-gate.shanti.ai/auth</div>
                             </div>
                             <div class="device-screen">
-                                <iframe src="https://www.loom.com/embed/df036c996d334f9088b526be7c0285a7?autoplay=1&muted=1&t=257&sid=a66c49d2-2b47-4a5c-b4ac-dbf5227701da" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+                                <iframe
+                                    src="https://www.loom.com/embed/df036c996d334f9088b526be7c0285a7?autoplay=1&muted=1&t=257&sid=a66c49d2-2b47-4a5c-b4ac-dbf5227701da"
+                                    allow="autoplay; encrypted-media" allowfullscreen></iframe>
                             </div>
                         </div>
                     </div>
@@ -2339,12 +2427,19 @@
                     <div class="project-content">
                         <span class="project-tag">Voice Intelligence</span>
                         <h3>Vaasu.ai</h3>
-                        <p>This next-generation Voice Agent dynamically handles customer support and books appointments by engaging in real-time, natural language conversations over the phone.</p>
-                        <p>Powered by advanced LLM reasoning, the bot processes context deeply—meaning it can troubleshoot customer inquiries, reschedule appointments, and seamlessly adopt the brand's persona.</p>
+                        <p>This next-generation Voice Agent dynamically handles customer support and books appointments
+                            by engaging in real-time, natural language conversations over the phone.</p>
+                        <p>Powered by advanced LLM reasoning, the bot processes context deeply—meaning it can
+                            troubleshoot customer inquiries, reschedule appointments, and seamlessly adopt the brand's
+                            persona.</p>
                         <ul class="project-features">
-                            <li><i data-lucide="check-circle"></i> <span>Dynamic phone support with <220ms transcription latency</span></li>
-                            <li><i data-lucide="check-circle"></i> <span>Complex reasoning and enterprise context parsing</span></li>
-                            <li><i data-lucide="check-circle"></i> <span>Outbound reservation calling and custom tone profiles</span></li>
+                            <li><i data-lucide="check-circle"></i> <span>Dynamic phone support with <220ms transcription
+                                        latency</span>
+                            </li>
+                            <li><i data-lucide="check-circle"></i> <span>Complex reasoning and enterprise context
+                                    parsing</span></li>
+                            <li><i data-lucide="check-circle"></i> <span>Outbound reservation calling and custom tone
+                                    profiles</span></li>
                         </ul>
                         <div class="tech-stack">
                             <span class="tech-pill">Voice AI</span>
@@ -2362,7 +2457,8 @@
                                 <div class="device-address">https://vaasu.ai/dashboard</div>
                             </div>
                             <div class="device-screen">
-                                <iframe src="https://drive.google.com/file/d/1otgX6vn8vZ6NlOQ8epC09cihsGiBXDDi/preview" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+                                <iframe src="https://drive.google.com/file/d/1otgX6vn8vZ6NlOQ8epC09cihsGiBXDDi/preview"
+                                    allow="autoplay; encrypted-media" allowfullscreen></iframe>
                             </div>
                         </div>
                     </div>
@@ -2373,12 +2469,19 @@
                     <div class="project-content">
                         <span class="project-tag">Voice Automation</span>
                         <h3>Smart Voice Booking</h3>
-                        <p>This AI voice agent automates appointment booking through natural, dynamic phone conversations. Built for service businesses, it allows users to schedule appointments by directly talking to the AI.</p>
-                        <p>The system handles real-time speech, checks available time slots against business calendars, applies custom working hour rules, and confirms bookings instantly, reducing operational overhead.</p>
+                        <p>This AI voice agent automates appointment booking through natural, dynamic phone
+                            conversations. Built for service businesses, it allows users to schedule appointments by
+                            directly talking to the AI.</p>
+                        <p>The system handles real-time speech, checks available time slots against business calendars,
+                            applies custom working hour rules, and confirms bookings instantly, reducing operational
+                            overhead.</p>
                         <ul class="project-features">
-                            <li><i data-lucide="check-circle"></i> <span>Automated time-slot querying and booking validation</span></li>
-                            <li><i data-lucide="check-circle"></i> <span>Bi-directional real-time speech streaming</span></li>
-                            <li><i data-lucide="check-circle"></i> <span>Google Calendar & custom CRM integrations</span></li>
+                            <li><i data-lucide="check-circle"></i> <span>Automated time-slot querying and booking
+                                    validation</span></li>
+                            <li><i data-lucide="check-circle"></i> <span>Bi-directional real-time speech
+                                    streaming</span></li>
+                            <li><i data-lucide="check-circle"></i> <span>Google Calendar & custom CRM
+                                    integrations</span></li>
                         </ul>
                         <div class="tech-stack">
                             <span class="tech-pill">NLP</span>
@@ -2396,7 +2499,9 @@
                                 <div class="device-address">https://voice-scheduler.shanti.ai</div>
                             </div>
                             <div class="device-screen">
-                                <iframe src="https://www.loom.com/embed/851c0504fddb4d62b7519c97608b52fb?autoplay=1&muted=1&sid=ac3af82f-eabb-4fa0-9f2d-66dafa878228" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+                                <iframe
+                                    src="https://www.loom.com/embed/851c0504fddb4d62b7519c97608b52fb?autoplay=1&muted=1&sid=ac3af82f-eabb-4fa0-9f2d-66dafa878228"
+                                    allow="autoplay; encrypted-media" allowfullscreen></iframe>
                             </div>
                         </div>
                     </div>
@@ -2407,12 +2512,18 @@
                     <div class="project-content">
                         <span class="project-tag">Social Media Automation</span>
                         <h3>Instagram Growth Agent</h3>
-                        <p>This intelligent automation script simulates human interaction on Instagram. By performing targeted searches based on semantic content, the script autonomously scrolls, likes, and comments.</p>
-                        <p>Designed to mimic real user behavior, it avoids detection while driving genuine, organic engagement and targeted audience growth completely on autopilot.</p>
+                        <p>This intelligent automation script simulates human interaction on Instagram. By performing
+                            targeted searches based on semantic content, the script autonomously scrolls, likes, and
+                            comments.</p>
+                        <p>Designed to mimic real user behavior, it avoids detection while driving genuine, organic
+                            engagement and targeted audience growth completely on autopilot.</p>
                         <ul class="project-features">
-                            <li><i data-lucide="check-circle"></i> <span>Humanized mouse paths & dynamic delay generation</span></li>
-                            <li><i data-lucide="check-circle"></i> <span>Contextual comment generation via LLM text models</span></li>
-                            <li><i data-lucide="check-circle"></i> <span>Automated organic discovery engine avoiding rate limits</span></li>
+                            <li><i data-lucide="check-circle"></i> <span>Humanized mouse paths & dynamic delay
+                                    generation</span></li>
+                            <li><i data-lucide="check-circle"></i> <span>Contextual comment generation via LLM text
+                                    models</span></li>
+                            <li><i data-lucide="check-circle"></i> <span>Automated organic discovery engine avoiding
+                                    rate limits</span></li>
                         </ul>
                         <div class="tech-stack">
                             <span class="tech-pill">Social Automation</span>
@@ -2425,7 +2536,8 @@
                         <div class="device-mockup phone-mockup">
                             <div class="phone-notch"></div>
                             <div class="device-screen">
-                                <iframe src="https://drive.google.com/file/d/17CzOV83g86Reh3-LjX0kPRn_XVzUy7vA/preview" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+                                <iframe src="https://drive.google.com/file/d/17CzOV83g86Reh3-LjX0kPRn_XVzUy7vA/preview"
+                                    allow="autoplay; encrypted-media" allowfullscreen></iframe>
                             </div>
                         </div>
                     </div>
@@ -2436,12 +2548,18 @@
                     <div class="project-content">
                         <span class="project-tag">Content Security</span>
                         <h3>Secure Telegram VIP Bot</h3>
-                        <p>This Telegram bot provides secure, VIP-only access to premium digital assets via time-limited links. Registered users receive private links posted directly in their dedicated VIP channel.</p>
-                        <p>Each link opens securely in a remote browser but instantly becomes invalid if shared outside the channel, preventing unauthorized downloading or forwarding of exclusive content.</p>
+                        <p>This Telegram bot provides secure, VIP-only access to premium digital assets via time-limited
+                            links. Registered users receive private links posted directly in their dedicated VIP
+                            channel.</p>
+                        <p>Each link opens securely in a remote browser but instantly becomes invalid if shared outside
+                            the channel, preventing unauthorized downloading or forwarding of exclusive content.</p>
                         <ul class="project-features">
-                            <li><i data-lucide="check-circle"></i> <span>Cryptographically signed time-expiring download URLs</span></li>
-                            <li><i data-lucide="check-circle"></i> <span>One-time browser session mapping and device fingerprinting</span></li>
-                            <li><i data-lucide="check-circle"></i> <span>Outbound channel notifications and auto-revocation</span></li>
+                            <li><i data-lucide="check-circle"></i> <span>Cryptographically signed time-expiring download
+                                    URLs</span></li>
+                            <li><i data-lucide="check-circle"></i> <span>One-time browser session mapping and device
+                                    fingerprinting</span></li>
+                            <li><i data-lucide="check-circle"></i> <span>Outbound channel notifications and
+                                    auto-revocation</span></li>
                         </ul>
                         <div class="tech-stack">
                             <span class="tech-pill">Telegram API</span>
@@ -2459,7 +2577,9 @@
                                 <div class="device-address">tg://resolve?domain=shanti_vip_bot</div>
                             </div>
                             <div class="device-screen">
-                                <iframe src="https://www.loom.com/embed/45d8bf8c575f44068c73a166c9da7332?autoplay=1&muted=1&sid=e904e814-796e-404c-b45a-3a22d2980097" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+                                <iframe
+                                    src="https://www.loom.com/embed/45d8bf8c575f44068c73a166c9da7332?autoplay=1&muted=1&sid=e904e814-796e-404c-b45a-3a22d2980097"
+                                    allow="autoplay; encrypted-media" allowfullscreen></iframe>
                             </div>
                         </div>
                     </div>
@@ -2469,12 +2589,14 @@
     </section>
 
     <!-- Metrics / Efficiency Section -->
-    <section id="growth" style="background: radial-gradient(circle at 50% 50%, rgba(var(--cyan-rgb), 0.02) 0%, transparent 60%);">
+    <section id="growth"
+        style="background: radial-gradient(circle at 50% 50%, rgba(var(--cyan-rgb), 0.02) 0%, transparent 60%);">
         <div class="container">
             <div class="section-header reveal">
                 <span class="section-badge">Scale Metrics</span>
                 <h2>Operational Multipliers</h2>
-                <p>We deliver measurable operational improvements, automating critical loops while guaranteeing accuracy.</p>
+                <p>We deliver measurable operational improvements, automating critical loops while guaranteeing
+                    accuracy.</p>
             </div>
 
             <div class="stats-grid">
@@ -2531,7 +2653,8 @@
                                 <div class="connect-label">Email Me</div>
                                 <div class="connect-value">info@shantiinfosoft.com</div>
                             </div>
-                            <button class="copy-btn" title="Copy Email" onclick="copyToClipboard('info@shantiinfosoft.com', this)">
+                            <button class="copy-btn" title="Copy Email"
+                                onclick="copyToClipboard('info@shantiinfosoft.com', this)">
                                 <i data-lucide="copy" style="width: 18px; height: 18px;"></i>
                             </button>
                         </div>
@@ -2555,20 +2678,43 @@
                     <div class="connect-social-container">
                         <div class="social-label">[ DIRECT UPLINKS ]</div>
                         <div class="connect-socials">
-                            <a href="https://www.linkedin.com/company/shantiinfosoft/?originalSubdomain=in" class="connect-social-btn" target="_blank" rel="noopener noreferrer" title="LinkedIn">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-linkedin"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
+                            <a href="https://www.linkedin.com/company/shantiinfosoft/?originalSubdomain=in"
+                                class="connect-social-btn" target="_blank" rel="noopener noreferrer" title="LinkedIn">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24"
+                                    fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                    stroke-linejoin="round" class="lucide lucide-linkedin">
+                                    <path
+                                        d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z" />
+                                    <rect x="2" y="9" width="4" height="12" />
+                                    <circle cx="4" cy="4" r="2" />
+                                </svg>
                             </a>
-                            <a href="https://github.com/shanti-python/Ai-Project-showcase/" class="connect-social-btn" target="_blank" rel="noopener noreferrer" title="GitHub">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-github"><path d="M15 22v-4a4.8 4.8 0 0 0-1-3.5c3 0 6-2 6-5.5.08-1.25-.27-2.48-1-3.5.28-1.15.28-2.35 0-3.5 0 0-1 0-3 1.5-2.64-.5-5.36-.5-8 0C6 2 5 2 5 2c-.3 1.15-.3 2.35 0 3.5A5.403 5.403 0 0 0 4 9c0 3.5 3 5.5 6 5.5-.39.49-.68 1.05-.85 1.65-.17.6-.22 1.23-.15 1.85v4"/><path d="M9 18c-4.51 2-5-2-7-2"/></svg>
+                            <a href="https://shantiinfosoft.com/" class="connect-social-btn" target="_blank"
+                                rel="noopener noreferrer" title="Website">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24"
+                                    fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                    stroke-linejoin="round" class="lucide lucide-globe">
+                                    <circle cx="12" cy="12" r="10" />
+                                    <path d="M12 2a14.5 14.5 0 0 0 0 20 14.5 14.5 0 0 0 0-20" />
+                                    <path d="M2 12h20" />
+                                </svg>
                             </a>
-                            <a href="https://shantiinfosoft.com/" class="connect-social-btn" target="_blank" rel="noopener noreferrer" title="Website">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-globe"><circle cx="12" cy="12" r="10"/><path d="M12 2a14.5 14.5 0 0 0 0 20 14.5 14.5 0 0 0 0-20"/><path d="M2 12h20"/></svg>
+                            <a href="https://x.com/shantiinfosoft" class="connect-social-btn" target="_blank"
+                                rel="noopener noreferrer" title="Twitter">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24"
+                                    fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                    stroke-linejoin="round" class="lucide lucide-twitter">
+                                    <path
+                                        d="M22 4s-.7 2.1-2 3.4c1.6 10-9.4 17.3-18 11.6 2.2.1 4.4-.6 6-2C3 15.5.5 9.6 3 5c2.2 2.6 5.6 4.1 9 4-.9-4.2 4-6.6 7-3.8 1.1 0 3-1.2 3-1.2z" />
+                                </svg>
                             </a>
-                            <a href="https://x.com/shantiinfosoft" class="connect-social-btn" target="_blank" rel="noopener noreferrer" title="Twitter">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-twitter"><path d="M22 4s-.7 2.1-2 3.4c1.6 10-9.4 17.3-18 11.6 2.2.1 4.4-.6 6-2C3 15.5.5 9.6 3 5c2.2 2.6 5.6 4.1 9 4-.9-4.2 4-6.6 7-3.8 1.1 0 3-1.2 3-1.2z"/></svg>
-                            </a>
-                            <a href="https://www.facebook.com/shantiinfosoft" class="connect-social-btn" target="_blank" rel="noopener noreferrer" title="Facebook">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-facebook"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>
+                            <a href="https://www.facebook.com/shantiinfosoft" class="connect-social-btn" target="_blank"
+                                rel="noopener noreferrer" title="Facebook">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24"
+                                    fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                    stroke-linejoin="round" class="lucide lucide-facebook">
+                                    <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z" />
+                                </svg>
                             </a>
                         </div>
                     </div>
@@ -2594,14 +2740,16 @@
                             </div>
                         </div>
                         <div class="input-wrapper">
-                            <label for="form-message">Project Brief</label>
+                            <label for="form-message">Project Details</label>
                             <div class="input-field-container">
-                                <textarea id="form-message" rows="4" placeholder="Describe your vision, technology stack, and timeline..." required></textarea>
+                                <textarea id="form-message" rows="4"
+                                    placeholder="Describe your vision, technology stack, and timeline..."
+                                    required></textarea>
                                 <div class="input-glow-line"></div>
                             </div>
                         </div>
                         <button type="submit" class="cyber-submit-btn">
-                            <span class="btn-text">Transmit Project Brief</span>
+                            <span class="btn-text">Send Inquiry</span>
                             <span class="btn-scanline"></span>
                         </button>
                     </form>
@@ -2647,7 +2795,7 @@
 
         // Smooth Page Scroll Reveals
         gsap.utils.toArray('.reveal').forEach((element, i) => {
-            gsap.fromTo(element, 
+            gsap.fromTo(element,
                 { opacity: 0, y: 45 },
                 {
                     opacity: 1,
@@ -2668,12 +2816,12 @@
             const toggleBtn = document.getElementById('mobile-menu-toggle');
             const navOverlay = document.getElementById('mobile-nav-overlay');
             const mobileLinks = document.querySelectorAll('.mobile-nav-link');
-            
+
             if (toggleBtn && navOverlay) {
                 toggleBtn.addEventListener('click', () => {
                     const isActive = navOverlay.classList.toggle('active');
                     toggleBtn.classList.toggle('active');
-                    
+
                     // Toggle Lucide Icon between menu and x
                     const icon = toggleBtn.querySelector('i');
                     if (icon) {
@@ -2719,19 +2867,19 @@
                     const rect = card.getBoundingClientRect();
                     const x = e.clientX - rect.left;
                     const y = e.clientY - rect.top;
-                    
+
                     const xc = rect.width / 2;
                     const yc = rect.height / 2;
-                    
+
                     // Degrees range -8 to 8
                     const angleX = (yc - y) / 10;
                     const angleY = (x - xc) / 10;
-                    
+
                     card.style.transform = `perspective(1000px) rotateX(${angleX}deg) rotateY(${angleY}deg) scale3d(1.01, 1.01, 1.01)`;
                     card.style.setProperty('--mouse-x', `${x}px`);
                     card.style.setProperty('--mouse-y', `${y}px`);
                 });
-                
+
                 card.addEventListener('mouseleave', () => {
                     card.style.transform = 'perspective(1000px) rotateX(0deg) rotateY(0deg) scale3d(1, 1, 1)';
                 });
@@ -2807,13 +2955,13 @@
         const initHero3DBrain = () => {
             const container = document.querySelector('.hero-3d-container');
             const canvas = document.getElementById('hero-3d-canvas');
-            
+
             const scene = new THREE.Scene();
-            
+
             // Camera Setup
             const camera = new THREE.PerspectiveCamera(45, container.clientWidth / container.clientHeight, 0.1, 100);
             camera.position.z = 7;
-            
+
             const renderer = new THREE.WebGLRenderer({ canvas: canvas, alpha: true, antialias: true });
             renderer.setSize(container.clientWidth, container.clientHeight);
             renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2));
@@ -2821,7 +2969,7 @@
             // Lighting Setup
             const ambientLight = new THREE.AmbientLight(0xffffff, 0.15);
             scene.add(ambientLight);
-            
+
             const cyanLight = new THREE.PointLight(0x06b6d4, 2, 12);
             cyanLight.position.set(2, 2, 2);
             scene.add(cyanLight);
@@ -2848,14 +2996,14 @@
                 const lobe = Math.random() > 0.5 ? 1 : -1;
                 const theta = Math.random() * Math.PI;
                 const phi = Math.random() * Math.PI * 2;
-                
+
                 // Mathematical equation mapping to double-lobed cerebrum
                 const r = 2.0 + Math.sin(theta * 3.5) * Math.cos(phi * 3.5) * 0.25 + Math.random() * 0.15;
-                
+
                 let x = r * Math.sin(theta) * Math.cos(phi) * 0.75;
                 let y = r * Math.sin(theta) * Math.sin(phi) * 1.0;
                 let z = r * Math.cos(theta) * 0.8;
-                
+
                 // Brain dividing fissure
                 if (lobe === 1) {
                     x = Math.abs(x) + 0.08;
@@ -2923,12 +3071,12 @@
                     const dx = nodes[i].x - nodes[j].x;
                     const dy = nodes[i].y - nodes[j].y;
                     const dz = nodes[i].z - nodes[j].z;
-                    const dist = Math.sqrt(dx*dx + dy*dy + dz*dz);
+                    const dist = Math.sqrt(dx * dx + dy * dy + dz * dz);
 
                     if (dist < thresholdDistance && connectionCount < maxConnections) {
                         linePositions.push(nodes[i].x, nodes[i].y, nodes[i].z);
                         linePositions.push(nodes[j].x, nodes[j].y, nodes[j].z);
-                        
+
                         const c = colCyan.clone().lerp(colFuchsia, Math.random());
                         lineColors.push(c.r, c.g, c.b, 0.25);
                         lineColors.push(c.r, c.g, c.b, 0.25);
@@ -2939,7 +3087,7 @@
 
             const lineGeom = new THREE.BufferGeometry();
             lineGeom.setAttribute('position', new THREE.Float32BufferAttribute(linePositions, 3));
-            
+
             // Custom Line basic shader logic using transparency
             const lineMat = new THREE.LineBasicMaterial({
                 color: 0x06b6d4,
@@ -2961,7 +3109,7 @@
                 const rect = container.getBoundingClientRect();
                 mouseX = ((e.clientX - rect.left) / container.clientWidth) * 2 - 1;
                 mouseY = -((e.clientY - rect.top) / container.clientHeight) * 2 + 1;
-                
+
                 targetRotX = mouseY * 0.4;
                 targetRotY = mouseX * 0.4;
             });
@@ -2976,14 +3124,14 @@
             let time = 0;
             const animateBrain = () => {
                 time += 0.005;
-                
+
                 // Slow rotation
                 brainGroup.rotation.y = time * 0.15;
-                
+
                 // Mouse parallax hover tilt
                 brainGroup.rotation.x += (targetRotX - brainGroup.rotation.x) * 0.08;
                 brainGroup.rotation.y += (targetRotY - brainGroup.rotation.y) * 0.08;
-                
+
                 // Subtle pulsation wave deform
                 const posArr = brainGeom.attributes.position.array;
                 for (let i = 0; i < numParticles; i++) {
@@ -2992,7 +3140,7 @@
                     posArr[idx + 1] += Math.sin(time * 2 + posArr[idx]) * 0.0004;
                 }
                 brainGeom.attributes.position.needsUpdate = true;
-                
+
                 // Modulate line opacity (active firing neural network)
                 neuralLines.material.opacity = 0.15 + 0.1 * Math.sin(time * 4);
 
@@ -3053,7 +3201,7 @@
                 const k = i + 0.5;
                 const phi = Math.acos(1 - 2 * k / count);
                 const theta = Math.PI * (1 + Math.sqrt(5)) * k;
-                
+
                 // Coordinates on a sphere
                 nodes.push({
                     name: techList[i].name,
@@ -3136,7 +3284,7 @@
                     const projY = node.y * scale + centerY;
 
                     // Update HTML element placement & scale
-                    node.el.style.transform = `translate3d(${projX - node.el.offsetWidth/2}px, ${projY - node.el.offsetHeight/2}px, 0px) scale(${scale})`;
+                    node.el.style.transform = `translate3d(${projX - node.el.offsetWidth / 2}px, ${projY - node.el.offsetHeight / 2}px, 0px) scale(${scale})`;
                     node.el.style.opacity = ((node.z + sphereRadius) / (2 * sphereRadius)) * 0.7 + 0.3;
                     node.el.style.zIndex = Math.round((sphereRadius - node.z) * 10);
                 });
@@ -3153,24 +3301,24 @@
                     ctx.beginPath();
                     ctx.moveTo(projXA, projYA);
                     ctx.lineTo(centerX, centerY);
-                    
+
                     const grad = ctx.createLinearGradient(projXA, projYA, centerX, centerY);
                     const op = ((nodeA.z + sphereRadius) / (2 * sphereRadius)) * 0.25;
                     grad.addColorStop(0, `rgba(6, 182, 212, ${op})`);
                     grad.addColorStop(1, `rgba(99, 102, 241, 0.02)`);
-                    
+
                     ctx.strokeStyle = grad;
                     ctx.stroke();
 
                     // Connect adjacent nodes
                     for (let j = i + 1; j < nodes.length; j++) {
                         const nodeB = nodes[j];
-                        
+
                         // Check proximity
                         const dx = nodeA.x - nodeB.x;
                         const dy = nodeA.y - nodeB.y;
                         const dz = nodeA.z - nodeB.z;
-                        const dist = Math.sqrt(dx*dx + dy*dy + dz*dz);
+                        const dist = Math.sqrt(dx * dx + dy * dy + dz * dz);
 
                         if (dist < sphereRadius * 1.05) {
                             const scaleB = focus / (focus + nodeB.z);
@@ -3223,14 +3371,14 @@
         document.addEventListener('DOMContentLoaded', () => {
             const contactForm = document.getElementById('cyber-contact-form');
             if (contactForm) {
-                contactForm.addEventListener('submit', function(e) {
+                contactForm.addEventListener('submit', function (e) {
                     e.preventDefault();
-                    
+
                     const name = document.getElementById('form-name').value.trim();
                     const email = document.getElementById('form-email').value.trim();
                     const message = document.getElementById('form-message').value.trim();
                     const toast = document.getElementById('copy-toast');
-                    
+
                     // Strict email validation regex
                     const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
                     if (!emailRegex.test(email)) {
@@ -3249,7 +3397,7 @@
                     const submitBtn = contactForm.querySelector('button[type="submit"]');
                     const originalBtnText = submitBtn.querySelector('.btn-text').innerText;
                     submitBtn.disabled = true;
-                    submitBtn.querySelector('.btn-text').innerText = 'Transmitting...';
+                    submitBtn.querySelector('.btn-text').innerText = 'Sending...';
 
                     // Send contact data
                     fetch('/submit-contact', {
@@ -3259,38 +3407,38 @@
                         },
                         body: JSON.stringify({ name, email, message })
                     })
-                    .then(response => response.json())
-                    .then(data => {
-                        submitBtn.disabled = false;
-                        submitBtn.querySelector('.btn-text').innerText = originalBtnText;
-                        
-                        if (toast) {
-                            if (data.status === 'success') {
-                                toast.innerHTML = `<i data-lucide="send" style="color: var(--cyan); width: 18px; height: 18px;"></i> Message Transmitted Successfully!`;
-                                contactForm.reset();
-                            } else {
-                                toast.innerHTML = `<i data-lucide="alert-circle" style="color: #ef4444; width: 18px; height: 18px;"></i> Error: ${data.message}`;
+                        .then(response => response.json())
+                        .then(data => {
+                            submitBtn.disabled = false;
+                            submitBtn.querySelector('.btn-text').innerText = originalBtnText;
+
+                            if (toast) {
+                                if (data.status === 'success') {
+                                    toast.innerHTML = `<i data-lucide="send" style="color: var(--cyan); width: 18px; height: 18px;"></i> Message Sent Successfully!`;
+                                    contactForm.reset();
+                                } else {
+                                    toast.innerHTML = `<i data-lucide="alert-circle" style="color: #ef4444; width: 18px; height: 18px;"></i> Error: ${data.message}`;
+                                }
+                                lucide.createIcons({ node: toast });
+                                toast.classList.add('active');
+                                setTimeout(() => {
+                                    toast.classList.remove('active');
+                                }, 4000);
                             }
-                            lucide.createIcons({ node: toast });
-                            toast.classList.add('active');
-                            setTimeout(() => {
-                                toast.classList.remove('active');
-                            }, 4000);
-                        }
-                    })
-                    .catch(err => {
-                        submitBtn.disabled = false;
-                        submitBtn.querySelector('.btn-text').innerText = originalBtnText;
-                        
-                        if (toast) {
-                            toast.innerHTML = `<i data-lucide="alert-circle" style="color: #ef4444; width: 18px; height: 18px;"></i> Network Error. Please try again.`;
-                            lucide.createIcons({ node: toast });
-                            toast.classList.add('active');
-                            setTimeout(() => {
-                                toast.classList.remove('active');
-                            }, 4000);
-                        }
-                    });
+                        })
+                        .catch(err => {
+                            submitBtn.disabled = false;
+                            submitBtn.querySelector('.btn-text').innerText = originalBtnText;
+
+                            if (toast) {
+                                toast.innerHTML = `<i data-lucide="alert-circle" style="color: #ef4444; width: 18px; height: 18px;"></i> Network Error. Please try again.`;
+                                lucide.createIcons({ node: toast });
+                                toast.classList.add('active');
+                                setTimeout(() => {
+                                    toast.classList.remove('active');
+                                }, 4000);
+                            }
+                        });
                 });
             }
         });
